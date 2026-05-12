@@ -464,55 +464,112 @@
     </section>
 
     <!-- Mission & Vision Section -->
-    <section class="purpose-section" id="missionVision">
-        <div class="purpose-bg">
+    <section class="purpose-section" id="missionVision" aria-labelledby="missionVisionTitle">
+        <div class="purpose-bg" aria-hidden="true">
             <div class="purpose-orb purpose-orb-1"></div>
             <div class="purpose-orb purpose-orb-2"></div>
+            <div class="purpose-grid-overlay"></div>
         </div>
-        
+
         <div class="purpose-container">
             <!-- Section Header -->
             <div class="purpose-header">
                 <span class="purpose-tag">Who We Are</span>
-                <h2 class="purpose-title">Mission & Vision</h2>
-                <p class="purpose-intro">We are a team based in Saudi Arabia. We help homes, shops, schools, and offices stay safe. We plan, install, and care for smart cameras, alarms, smart locks, and intercoms. Our goal is simple. We want you to feel calm and in control. We work in Al Khobar, Al Jubail, Dammam, Riyadh, and Jeddah. We are happy to guide you and answer any question. Reach out and let us help you pick the right setup for your space.</p>
+                <h2 class="purpose-title" id="missionVisionTitle">
+                    Mission &amp; <span class="purpose-title-accent">Vision</span>
+                </h2>
             </div>
 
-            <!-- Mission & Vision Cards -->
-            <div class="purpose-cards">
-                <!-- Mission Card -->
-                <div class="purpose-card">
-                    <div class="card-icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10"/>
-                            <circle cx="12" cy="12" r="6"/>
-                            <circle cx="12" cy="12" r="2"/>
+            <!-- Two-column layout: Story | Cards -->
+            <div class="purpose-layout">
+
+                <!-- LEFT: Story / Intent -->
+                <div class="purpose-story">
+                    <p class="purpose-lede">
+                        A Saudi-based team keeping homes, shops, schools, and offices safe.
+                    </p>
+                    <p class="purpose-body">
+                        We plan, install, and care for smart cameras, alarms, smart locks, and intercoms.
+                        Our goal is simple — we want you to feel calm and in control of your space.
+                        Reach out and let us help you pick the right setup.
+                    </p>
+
+                    <ul class="purpose-stats" role="list">
+                        <li class="stat-item">
+                            <strong class="stat-value">10<span>+</span></strong>
+                            <span class="stat-label">Years of trust</span>
+                        </li>
+                        <li class="stat-item">
+                            <strong class="stat-value">5</strong>
+                            <span class="stat-label">Cities served</span>
+                        </li>
+                        <li class="stat-item">
+                            <strong class="stat-value">24/7</strong>
+                            <span class="stat-label">Support &amp; care</span>
+                        </li>
+                    </ul>
+
+                    <div class="purpose-cities" aria-label="Cities we serve">
+                        <span class="city-label">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Serving across KSA
+                        </span>
+                        <div class="city-pills">
+                            <span class="city-pill">Al Khobar</span>
+                            <span class="city-pill">Al Jubail</span>
+                            <span class="city-pill">Dammam</span>
+                            <span class="city-pill">Riyadh</span>
+                            <span class="city-pill">Jeddah</span>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="purpose-cta">
+                        Talk to our team
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M5 12h14M13 5l7 7-7 7"/>
                         </svg>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-label">Our Mission</span>
-                        <h3 class="card-heading">Protecting What Matters Most</h3>
-                        <p class="card-description">
-                            We deliver smart safety tools that guard the people and places you care about. Our gear is modern, easy to use, and built to last. We keep things simple so you can focus on your day.
-                        </p>
-                    </div>
+                    </a>
                 </div>
 
-                <!-- Vision Card -->
-                <div class="purpose-card">
-                    <div class="card-icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-label">Our Vision</span>
-                        <h3 class="card-heading">Leading the Future of Safety</h3>
-                        <p class="card-description">
-                            To be a world leader in smart safety tech. We aim to set fresh marks for new ideas, quality, and trust.
-                        </p>
-                    </div>
+                <!-- RIGHT: Mission & Vision Cards -->
+                <div class="purpose-cards">
+                    <!-- Mission Card -->
+                    <article class="purpose-card">
+                        <div class="card-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-label">Our Mission</span>
+                            <h3 class="card-heading">Protecting What Matters Most</h3>
+                            <p class="card-description">
+                                Modern, easy-to-use safety tools that guard the people and places you care about &mdash; built to last and simple to live with.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Vision Card -->
+                    <article class="purpose-card">
+                        <div class="card-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-label">Our Vision</span>
+                            <h3 class="card-heading">Leading the Future of Safety</h3>
+                            <p class="card-description">
+                                To be a regional leader in smart safety &mdash; setting fresh marks for new ideas, quality, and trust across the Kingdom.
+                            </p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
