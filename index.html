@@ -31,69 +31,284 @@
     <link rel="canonical" href="https://www.visionangles.com/">
     <link rel="llms" type="text/markdown" href="/llms.txt">
     <link rel="icon" href="assets/images/visionnew.png" type="image/png">
+    <!--
+      ============================================================
+      GEO / AI-citation schema graph
+      Single @graph block → resolves Organization, LocalBusiness
+      branches, WebSite, BreadcrumbList, ItemList of Services and
+      FAQPage. Update sameAs[] with the real social profile URLs
+      once they are live (Facebook, Instagram, LinkedIn, YouTube,
+      X/Twitter, WhatsApp business, Google Business Profile).
+      ============================================================
+    -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "@id": "https://www.visionangles.com/#organization",
-      "name": "Vision Angles Security Est",
-      "alternateName": ["Visionangles", "Vision Angles"],
-      "url": "https://www.visionangles.com/",
-      "logo": "https://www.visionangles.com/assets/images/visionnew.png",
-      "image": "https://www.visionangles.com/assets/images/visionnew.png",
-      "description": "Trusted CCTV, access control, intercom, burglar alarm and ELV solutions supplier in Saudi Arabia.",
-      "telephone": "+966138226660",
-      "email": "info@visionangles.com",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Head Office",
-        "addressLocality": "Al Khobar",
-        "addressRegion": "Eastern Province",
-        "postalCode": "34714",
-        "addressCountry": "SA"
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Al Khobar" },
-        { "@type": "City", "name": "Al Jubail" },
-        { "@type": "City", "name": "Dammam" },
-        { "@type": "City", "name": "Riyadh" },
-        { "@type": "City", "name": "Jeddah" },
-        { "@type": "Country", "name": "Saudi Arabia" }
-      ],
-      "location": [
+      "@graph": [
         {
-          "@type": "Place",
-          "name": "Visionangles — Al Khobar Showroom",
-          "address": { "@type": "PostalAddress", "addressLocality": "Al Khobar", "addressCountry": "SA" }
+          "@type": "Organization",
+          "@id": "https://www.visionangles.com/#organization",
+          "name": "Vision Angles Security Est",
+          "alternateName": ["Visionangles", "Vision Angles", "Visionangles Security", "Vision Angles Security Systems"],
+          "url": "https://www.visionangles.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.visionangles.com/assets/images/visionnew.png",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://www.visionangles.com/assets/images/visionnew.png",
+          "description": "Vision Angles Security Est is a Saudi Arabia–based ELV and security systems integrator specializing in CCTV surveillance, access control, video intercom, burglar alarms, network infrastructure, audio systems, LED displays, speed gates and thermal cameras. Founded in Al Khobar with showrooms in Al Khobar and Al Jubail, and regional offices in Riyadh and Jeddah.",
+          "slogan": "Securing Tomorrow, Protecting Today",
+          "foundingLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Al Khobar",
+              "addressRegion": "Eastern Province",
+              "addressCountry": "SA"
+            }
+          },
+          "knowsAbout": [
+            "CCTV surveillance systems",
+            "IP camera installation",
+            "Access control systems",
+            "Biometric authentication",
+            "Video intercom systems",
+            "Burglar alarm systems",
+            "Network infrastructure",
+            "Structured cabling",
+            "Thermal imaging cameras",
+            "LED display walls",
+            "Speed gates and turnstiles",
+            "Public address audio systems",
+            "ELV (Extra Low Voltage) systems",
+            "Hikvision, Dahua, ZKTeco, EZVIZ, Sophos, Fortinet, Cisco, Grandstream integration"
+          ],
+          "areaServed": [
+            { "@type": "City", "name": "Al Khobar" },
+            { "@type": "City", "name": "Al Jubail" },
+            { "@type": "City", "name": "Dammam" },
+            { "@type": "City", "name": "Riyadh" },
+            { "@type": "City", "name": "Jeddah" },
+            { "@type": "Country", "name": "Saudi Arabia" }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "telephone": "+966-13-822-6660",
+              "email": "info@visionangles.com",
+              "areaServed": "SA",
+              "availableLanguage": ["English", "Arabic"]
+            },
+            {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "telephone": "+966-54-165-2927",
+              "email": "sales@visionangles.com",
+              "areaServed": "SA",
+              "availableLanguage": ["English", "Arabic"]
+            }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/visionangles",
+            "https://www.instagram.com/visionangles",
+            "https://www.linkedin.com/company/visionangles-security",
+            "https://www.youtube.com/@visionangles",
+            "https://x.com/visionangles",
+            "https://wa.me/966541652927"
+          ],
+          "subOrganization": [
+            { "@id": "https://www.visionangles.com/#headoffice" },
+            { "@id": "https://www.visionangles.com/#khobar-showroom" },
+            { "@id": "https://www.visionangles.com/#jubail-showroom" }
+          ]
         },
+
         {
-          "@type": "Place",
-          "name": "Visionangles — Al Jubail Showroom",
-          "address": { "@type": "PostalAddress", "addressLocality": "Al Jubail", "addressCountry": "SA" }
+          "@type": "LocalBusiness",
+          "@id": "https://www.visionangles.com/#headoffice",
+          "name": "Vision Angles Security — Head Office (Al Khobar)",
+          "parentOrganization": { "@id": "https://www.visionangles.com/#organization" },
+          "url": "https://www.visionangles.com/contact.html",
+          "image": "https://www.visionangles.com/assets/images/visionnew.png",
+          "telephone": "+966-13-822-6660",
+          "email": "info@visionangles.com",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Head Office",
+            "addressLocality": "Al Khobar",
+            "addressRegion": "Eastern Province",
+            "postalCode": "34714",
+            "addressCountry": "SA"
+          },
+          "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],
+            "opens": "08:00",
+            "closes": "18:00"
+          }],
+          "hasMap": "https://maps.app.goo.gl/rYADwCbbud7wgos68"
+        },
+
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://www.visionangles.com/#khobar-showroom",
+          "name": "Vision Angles Security — Al Khobar Showroom",
+          "parentOrganization": { "@id": "https://www.visionangles.com/#organization" },
+          "url": "https://www.visionangles.com/contact.html",
+          "telephone": "+966-54-165-2927",
+          "email": "sales@visionangles.com",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Al Khobar",
+            "addressRegion": "Eastern Province",
+            "addressCountry": "SA"
+          },
+          "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],
+            "opens": "08:00",
+            "closes": "21:00"
+          }],
+          "hasMap": "https://maps.app.goo.gl/yeqsH3qESi6rozv78"
+        },
+
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://www.visionangles.com/#jubail-showroom",
+          "name": "Vision Angles Security — Al Jubail Showroom",
+          "parentOrganization": { "@id": "https://www.visionangles.com/#organization" },
+          "url": "https://www.visionangles.com/contact.html",
+          "telephone": "+966-56-683-5669",
+          "email": "sales@visionangles.com",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Al Jubail",
+            "addressRegion": "Eastern Province",
+            "addressCountry": "SA"
+          },
+          "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],
+            "opens": "08:00",
+            "closes": "21:00"
+          }],
+          "hasMap": "https://maps.app.goo.gl/vLPhLCWJuATvnnwi7"
+        },
+
+        {
+          "@type": "WebSite",
+          "@id": "https://www.visionangles.com/#website",
+          "url": "https://www.visionangles.com/",
+          "name": "Vision Angles Security",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://www.visionangles.com/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.visionangles.com/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+
+        {
+          "@type": "WebPage",
+          "@id": "https://www.visionangles.com/#webpage",
+          "url": "https://www.visionangles.com/",
+          "name": "Vision Angles Security | CCTV & ELV Solutions Saudi Arabia",
+          "isPartOf": { "@id": "https://www.visionangles.com/#website" },
+          "about": { "@id": "https://www.visionangles.com/#organization" },
+          "primaryImageOfPage": "https://www.visionangles.com/assets/images/visionnew.png",
+          "inLanguage": "en"
+        },
+
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.visionangles.com/#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.visionangles.com/" }
+          ]
+        },
+
+        {
+          "@type": "ItemList",
+          "@id": "https://www.visionangles.com/#services",
+          "name": "Vision Angles Security — Services & Solutions",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "CCTV & IP Surveillance", "url": "https://www.visionangles.com/surveillance-solutions.html", "provider": { "@id": "https://www.visionangles.com/#organization" }, "areaServed": "SA" }},
+            { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "Access Control Systems", "url": "https://www.visionangles.com/access-control.html", "provider": { "@id": "https://www.visionangles.com/#organization" }, "areaServed": "SA" }},
+            { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "Video Intercom", "url": "https://www.visionangles.com/video-intercom.html", "provider": { "@id": "https://www.visionangles.com/#organization" }, "areaServed": "SA" }},
+            { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "name": "Burglar Alarm Systems", "url": "https://www.visionangles.com/buglar-alarm.html", "provider": { "@id": "https://www.visionangles.com/#organization" }, "areaServed": "SA" }},
+            { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "Network Solutions", "url": "https://www.visionangles.com/network-solutions.html", "provider": { "@id": "https://www.visionangles.com/#organization" }, "areaServed": "SA" }},
+            { "@type": "ListItem", "position": 6, "item": { "@type": "Service", "name": "Audio Systems", "url": "https://www.visionangles.com/audio-products.html", "provider": { "@id": "https://www.visionangles.com/#organization" }, "areaServed": "SA" }},
+            { "@type": "ListItem", "position": 7, "item": { "@type": "Service", "name": "Thermal Cameras", "url": "https://www.visionangles.com/thermal.html", "provider": { "@id": "https://www.visionangles.com/#organization" }, "areaServed": "SA" }},
+            { "@type": "ListItem", "position": 8, "item": { "@type": "Service", "name": "LED Displays", "url": "https://www.visionangles.com/led-displays.html", "provider": { "@id": "https://www.visionangles.com/#organization" }, "areaServed": "SA" }},
+            { "@type": "ListItem", "position": 9, "item": { "@type": "Service", "name": "Speed Gates & Turnstiles", "url": "https://www.visionangles.com/speed-gates.html", "provider": { "@id": "https://www.visionangles.com/#organization" }, "areaServed": "SA" }},
+            { "@type": "ListItem", "position": 10, "item": { "@type": "Service", "name": "Interactive Flat Panels", "url": "https://www.visionangles.com/interactive-flat-panels.html", "provider": { "@id": "https://www.visionangles.com/#organization" }, "areaServed": "SA" }},
+            { "@type": "ListItem", "position": 11, "item": { "@type": "Service", "name": "IP Phones / VoIP", "url": "https://www.visionangles.com/ip_phones.html", "provider": { "@id": "https://www.visionangles.com/#organization" }, "areaServed": "SA" }},
+            { "@type": "ListItem", "position": 12, "item": { "@type": "Service", "name": "Parking Management", "url": "https://www.visionangles.com/parking_management.html", "provider": { "@id": "https://www.visionangles.com/#organization" }, "areaServed": "SA" }}
+          ]
+        },
+
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.visionangles.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What services does Vision Angles Security provide in Saudi Arabia?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Vision Angles Security is a full-service ELV and security systems integrator in Saudi Arabia. We supply, install and maintain CCTV and IP surveillance, access control, video intercom, burglar alarms, network infrastructure, public-address audio, thermal cameras, LED displays, speed gates, interactive flat panels and parking management systems. We serve homes, retail shops, offices, schools and industrial sites across Al Khobar, Al Jubail, Dammam, Riyadh and Jeddah."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is Vision Angles Security located?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our head office is in Al Khobar (postal code 34714), Eastern Province, Saudi Arabia. We operate two showrooms — Al Khobar and Al Jubail — and two regional offices in Riyadh (Central Region) and Jeddah (Western Region)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which security brands does Vision Angles Security install?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We are an authorized integrator and partner for Hikvision, Dahua, ZKTeco, EZVIZ, Bosch, Hanwha, Paradox and Ajax for surveillance and alarms; Sophos, Fortinet, WatchGuard, Cisco, TP-Link, D-Link and Ruijie for network and security infrastructure; Grandstream and Cisco for IP telephony; Bose, Ahuja, Shure and ProSound for audio; and Lampro, Samsung and partner brands for LED displays and interactive panels."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you provide installation and after-sales support?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Every project includes site survey, design, supply, installation, commissioning, user training and ongoing maintenance. Our local technicians cover Al Khobar, Al Jubail, Dammam, Riyadh and Jeddah, and we offer annual maintenance contracts (AMC) with same-day response in the Eastern Province."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I request a quote from Vision Angles Security?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can request a quote by calling +966 13 822 6660, sending WhatsApp to +966 54 165 2927, emailing info@visionangles.com, or submitting the contact form at https://www.visionangles.com/contact.html. Quotes are typically returned within one business day."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are Vision Angles Security's working hours?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our head office in Al Khobar operates Saturday to Thursday, 8:00 AM to 6:00 PM. The Al Khobar and Al Jubail showrooms are open Saturday to Thursday, 8:00 AM to 9:00 PM. We are closed on Fridays."
+              }
+            }
+          ]
         }
-      ],
-      "openingHoursSpecification": [{
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      }],
-      "sameAs": []
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "url": "https://www.visionangles.com/",
-      "name": "Vision Angles Security",
-      "publisher": { "@id": "https://www.visionangles.com/#organization" },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.visionangles.com/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      ]
     }
     </script>
 </head>
@@ -655,227 +870,367 @@
     </section>
 
     <!-- Our Branches Section -->
-    <section class="branches-section" id="branches">
-        <div class="branches-bg-effects">
+    <section class="branches-section" id="branches" aria-labelledby="branchesTitle">
+        <div class="branches-bg-effects" aria-hidden="true">
             <div class="branches-orb branches-orb-1"></div>
             <div class="branches-orb branches-orb-2"></div>
             <div class="branches-grid-lines"></div>
         </div>
-        
+
         <div class="branches-container">
-            <div class="branches-header">
+            <!-- Header -->
+            <div class="branches-header loc-header">
                 <span class="branches-label">
                     <span class="label-dot"></span>
                     Our Locations
                 </span>
-                <h2 class="branches-title">Our Presence Across Saudi Arabia</h2>
-                <p class="branches-subtitle">Serving clients nationwide — from the Eastern Province to Riyadh and Jeddah — with dedicated local teams and expert support</p>
+                <h2 class="branches-title" id="branchesTitle">
+                    Presence Across <span class="loc-title-accent">Saudi Arabia</span>
+                </h2>
+                <p class="branches-subtitle">
+                    Three showrooms in the Eastern Province, plus regional offices in Riyadh and Jeddah &mdash; backed by local teams ready to plan, install, and support.
+                </p>
+
+                <!-- Quick KPI strip -->
+                <ul class="loc-kpis" role="list">
+                    <li class="loc-kpi">
+                        <span class="loc-kpi-value">5</span>
+                        <span class="loc-kpi-label">Locations</span>
+                    </li>
+                    <li class="loc-kpi">
+                        <span class="loc-kpi-value">3</span>
+                        <span class="loc-kpi-label">Showrooms</span>
+                    </li>
+                    <li class="loc-kpi">
+                        <span class="loc-kpi-value">2</span>
+                        <span class="loc-kpi-label">Regional Offices</span>
+                    </li>
+                    <li class="loc-kpi">
+                        <span class="loc-kpi-value">KSA</span>
+                        <span class="loc-kpi-label">Nationwide Reach</span>
+                    </li>
+                </ul>
             </div>
 
-            <div class="branches-map-wrapper">
-                <!-- Interactive Leaflet Map with Exact Location Markers -->
-                <div class="branches-map">
+            <!-- Map + Cards Grid -->
+            <div class="branches-map-wrapper loc-grid">
+                <!-- Map (sticky on desktop) -->
+                <div class="branches-map loc-map">
                     <div class="map-container">
                         <div id="leaflet-map"></div>
+                        <div class="loc-map-corner" aria-hidden="true">
+                            <span class="loc-map-corner-dot"></span>
+                            Live map &middot; click pins for directions
+                        </div>
                     </div>
                 </div>
 
-                <!-- Branch Cards -->
-                <div class="branches-cards">
+                <!-- Cards List -->
+                <div class="loc-list" role="list">
+
                     <!-- Al Khobar - Head Office -->
-                    <div class="branch-card branch-card-main">
-                        <div class="branch-card-glow"></div>
-                        <div class="branch-card-content">
-                            <div class="branch-badge">Head Office</div>
-                            <div class="branch-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M3 21h18"/>
-                                    <path d="M5 21V7l8-4v18"/>
-                                    <path d="M19 21V11l-6-4"/>
-                                    <path d="M9 9v.01"/>
-                                    <path d="M9 12v.01"/>
-                                    <path d="M9 15v.01"/>
-                                    <path d="M9 18v.01"/>
+                    <article class="loc-card loc-card--featured" role="listitem">
+                        <header class="loc-card-head">
+                            <div class="loc-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                                    <path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/>
+                                    <path d="M9 9v.01"/><path d="M9 12v.01"/><path d="M9 15v.01"/><path d="M9 18v.01"/>
                                 </svg>
                             </div>
-                            <h3 class="branch-city">Head Office </h3>
-                            <p class="branch-address">Al Khobar 34714<br>Eastern Province, Kingdom of Saudi Arabia</p>
-                            <div class="branch-details">
-                                <div class="branch-detail">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-                                    </svg>
-                                    <span>+966 138226660</span>
-                                </div>
-                                <div class="branch-detail">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                        <polyline points="22,6 12,13 2,6"/>
-                                    </svg>
-                                    <span>info@visionangles.com</span>
-                                </div>
-                                <div class="branch-detail">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <polyline points="12 6 12 12 16 14"/>
-                                    </svg>
-                                    <span>Sat - Thu: 8AM - 6PM</span>
-                                </div>
+                            <div class="loc-card-titles">
+                                <span class="loc-chip loc-chip--gold">Head Office</span>
+                                <h3 class="loc-card-city">Al Khobar &mdash; Head Office</h3>
+                                <p class="loc-card-region">Al Khobar 34714 · Eastern Province, KSA</p>
                             </div>
-                            <a href="https://maps.app.goo.gl/rYADwCbbud7wgos68" target="_blank" class="branch-cta">
-                                <span>Get Directions</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="5" y1="12" x2="19" y2="12"/>
-                                    <polyline points="12 5 19 12 12 19"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+                            <span class="loc-status" title="Open">
+                                <span class="loc-status-dot"></span>
+                                Open
+                            </span>
+                        </header>
 
-                    <!-- Al Khobar - Commercial Shop -->
-                    <div class="branch-card">
-                        <div class="branch-card-glow"></div>
-                        <div class="branch-card-content">
-                            <div class="branch-badge badge-shop">Showroom</div>
-                            <div class="branch-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <ul class="loc-info" role="list">
+                            <li class="loc-info-row">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                <a href="tel:+966138226660">+966 13 822 6660</a>
+                            </li>
+                            <li class="loc-info-row">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                <a href="mailto:info@visionangles.com">info@visionangles.com</a>
+                            </li>
+                            <li class="loc-info-row">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                <span>Sat &ndash; Thu &middot; 8AM &ndash; 6PM</span>
+                            </li>
+                        </ul>
+
+                        <a href="https://maps.app.goo.gl/rYADwCbbud7wgos68" target="_blank" rel="noopener" class="loc-btn">
+                            Get Directions
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <!-- Al Khobar - Showroom -->
+                    <article class="loc-card" role="listitem">
+                        <header class="loc-card-head">
+                            <div class="loc-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
                                     <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                                     <polyline points="9 22 9 12 15 12 15 22"/>
                                 </svg>
                             </div>
-                            <h3 class="branch-city">Al Khobar Showroom</h3>
-                            <p class="branch-address">Commercial Shop<br>Eastern Province, KSA</p>
-                            <div class="branch-details">
-                                <div class="branch-detail">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-                                    </svg>
-                                    <span>+966 54 165 2927</span>
-                                </div>
-                                <div class="branch-detail">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                        <polyline points="22,6 12,13 2,6"/>
-                                    </svg>
-                                    <span>sales@visionangles.com</span>
-                                </div>
-                                <div class="branch-detail">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <polyline points="12 6 12 12 16 14"/>
-                                    </svg>
-                                    <span>Sat - Thu: 8AM - 9PM</span>
-                                </div>
+                            <div class="loc-card-titles">
+                                <span class="loc-chip">Showroom</span>
+                                <h3 class="loc-card-city">Al Khobar Showroom</h3>
+                                <p class="loc-card-region">Commercial Shop · Eastern Province, KSA</p>
                             </div>
-                            <a href="https://maps.app.goo.gl/yeqsH3qESi6rozv78" target="_blank" class="branch-cta">
-                                <span>Get Directions</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="5" y1="12" x2="19" y2="12"/>
-                                    <polyline points="12 5 19 12 12 19"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+                            <span class="loc-status">
+                                <span class="loc-status-dot"></span>
+                                Open
+                            </span>
+                        </header>
 
-                    <!-- Jubail - Commercial Shop -->
-                    <div class="branch-card">
-                        <div class="branch-card-glow"></div>
-                        <div class="branch-card-content">
-                            <div class="branch-badge badge-shop">Showroom</div>
-                            <div class="branch-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <ul class="loc-info" role="list">
+                            <li class="loc-info-row">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                <a href="tel:+966541652927">+966 54 165 2927</a>
+                            </li>
+                            <li class="loc-info-row">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                <a href="mailto:sales@visionangles.com">sales@visionangles.com</a>
+                            </li>
+                            <li class="loc-info-row">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                <span>Sat &ndash; Thu &middot; 8AM &ndash; 9PM</span>
+                            </li>
+                        </ul>
+
+                        <a href="https://maps.app.goo.gl/yeqsH3qESi6rozv78" target="_blank" rel="noopener" class="loc-btn">
+                            Get Directions
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <!-- Al Jubail - Showroom -->
+                    <article class="loc-card" role="listitem">
+                        <header class="loc-card-head">
+                            <div class="loc-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
                                     <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                                     <polyline points="9 22 9 12 15 12 15 22"/>
                                 </svg>
                             </div>
-                            <h3 class="branch-city">Al Jubail Showroom</h3>
-                            <p class="branch-address">Commercial Shop<br>Eastern Province, KSA</p>
-                            <div class="branch-details">
-                                <div class="branch-detail">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-                                    </svg>
-                                    <span>+966 56 683 5669</span>
-                                </div>
-                                <div class="branch-detail">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                        <polyline points="22,6 12,13 2,6"/>
-                                    </svg>
-                                    <span>sales@visionangles.com</span>
-                                </div>
-                                <div class="branch-detail">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <polyline points="12 6 12 12 16 14"/>
-                                    </svg>
-                                    <span>Sat - Thu: 8AM - 9PM</span>
-                                </div>
+                            <div class="loc-card-titles">
+                                <span class="loc-chip">Showroom</span>
+                                <h3 class="loc-card-city">Al Jubail Showroom</h3>
+                                <p class="loc-card-region">Commercial Shop · Eastern Province, KSA</p>
                             </div>
-                            <a href="https://maps.app.goo.gl/vLPhLCWJuATvnnwi7" target="_blank" class="branch-cta">
-                                <span>Get Directions</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="5" y1="12" x2="19" y2="12"/>
-                                    <polyline points="12 5 19 12 12 19"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+                            <span class="loc-status">
+                                <span class="loc-status-dot"></span>
+                                Open
+                            </span>
+                        </header>
 
-                    <!-- Riyadh - CRO -->
-                    <div class="branch-card">
-                        <div class="branch-card-glow"></div>
-                        <div class="branch-card-content">
-                            <div class="branch-badge badge-rep">CRO</div>
-                            <div class="branch-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="9" cy="7" r="4"/>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        <ul class="loc-info" role="list">
+                            <li class="loc-info-row">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
                                 </svg>
-                            </div>
-                            <h3 class="branch-city">Riyadh</h3>
-                            <p class="branch-address">Central Region Office<br>Riyadh, Kingdom of Saudi Arabia</p>
-                            <div class="branch-details">
-                                <div class="branch-detail">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                        <polyline points="22,6 12,13 2,6"/>
-                                    </svg>
-                                    <span>info@visionangles.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                <a href="tel:+966566835669">+966 56 683 5669</a>
+                            </li>
+                            <li class="loc-info-row">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                <a href="mailto:sales@visionangles.com">sales@visionangles.com</a>
+                            </li>
+                            <li class="loc-info-row">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                <span>Sat &ndash; Thu &middot; 8AM &ndash; 9PM</span>
+                            </li>
+                        </ul>
 
-                    <!-- Jeddah - WRO -->
-                    <div class="branch-card">
-                        <div class="branch-card-glow"></div>
-                        <div class="branch-card-content">
-                            <div class="branch-badge badge-rep">WRO</div>
-                            <div class="branch-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="9" cy="7" r="4"/>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                                </svg>
-                            </div>
-                            <h3 class="branch-city">Jeddah</h3>
-                            <p class="branch-address">Western Region Office<br>Jeddah, Kingdom of Saudi Arabia</p>
-                            <div class="branch-details">
-                                <div class="branch-detail">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                        <polyline points="22,6 12,13 2,6"/>
-                                    </svg>
-                                    <span>info@visionangles.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <a href="https://maps.app.goo.gl/vLPhLCWJuATvnnwi7" target="_blank" rel="noopener" class="loc-btn">
+                            Get Directions
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+
                 </div>
+
+                <!-- Regional Offices: compact pair (sits under the map on desktop) -->
+                <div class="loc-pair">
+                    <article class="loc-card loc-card--mini" role="listitem">
+                        <header class="loc-card-head">
+                            <div class="loc-card-icon loc-card-icon--small">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="loc-card-titles">
+                                <span class="loc-chip loc-chip--muted">CRO</span>
+                                <h3 class="loc-card-city">Riyadh</h3>
+                                <p class="loc-card-region">Central Region Office, KSA</p>
+                            </div>
+                        </header>
+                        <a href="mailto:info@visionangles.com" class="loc-mini-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            info@visionangles.com
+                        </a>
+                    </article>
+
+                    <article class="loc-card loc-card--mini" role="listitem">
+                        <header class="loc-card-head">
+                            <div class="loc-card-icon loc-card-icon--small">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="loc-card-titles">
+                                <span class="loc-chip loc-chip--muted">WRO</span>
+                                <h3 class="loc-card-city">Jeddah</h3>
+                                <p class="loc-card-region">Western Region Office, KSA</p>
+                            </div>
+                        </header>
+                        <a href="mailto:info@visionangles.com" class="loc-mini-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            info@visionangles.com
+                        </a>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ Section — Citable answers for AI search (GEO)
+         Mirrors the FAQPage JSON-LD in <head> for rich-result eligibility
+         ============================================================ -->
+    <section class="faq-section" id="faq" aria-labelledby="faqTitle">
+        <div class="faq-bg" aria-hidden="true">
+            <div class="faq-orb faq-orb-1"></div>
+            <div class="faq-orb faq-orb-2"></div>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-header">
+                <span class="faq-label">
+                    <span class="label-dot"></span>
+                    Frequently Asked
+                </span>
+                <h2 class="faq-title" id="faqTitle">
+                    Answers Before You <span class="faq-title-accent">Ask</span>
+                </h2>
+                <p class="faq-subtitle">
+                    Quick facts about Vision Angles Security &mdash; what we do, where we work, and how to reach us.
+                </p>
+            </div>
+
+            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" open>
+                    <summary class="faq-question">
+                        <span itemprop="name">What services does Vision Angles Security provide in Saudi Arabia?</span>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                            Vision Angles Security is a full-service ELV and security systems integrator in Saudi Arabia. We supply, install and maintain <strong>CCTV and IP surveillance, access control, video intercom, burglar alarms, network infrastructure, public-address audio, thermal cameras, LED displays, speed gates, interactive flat panels and parking management systems</strong>. We serve homes, retail shops, offices, schools and industrial sites across Al Khobar, Al Jubail, Dammam, Riyadh and Jeddah.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="faq-question">
+                        <span itemprop="name">Where is Vision Angles Security located?</span>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                            Our head office is in <strong>Al Khobar (postal code 34714), Eastern Province, Saudi Arabia</strong>. We operate two showrooms &mdash; Al Khobar and Al Jubail &mdash; and two regional offices in Riyadh (Central Region) and Jeddah (Western Region).
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="faq-question">
+                        <span itemprop="name">Which security brands does Vision Angles Security install?</span>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                            We are an authorized integrator and partner for <strong>Hikvision, Dahua, ZKTeco, EZVIZ, Bosch, Hanwha, Paradox</strong> and <strong>Ajax</strong> for surveillance and alarms; <strong>Sophos, Fortinet, WatchGuard, Cisco, TP-Link, D-Link</strong> and <strong>Ruijie</strong> for network and security infrastructure; <strong>Grandstream</strong> and <strong>Cisco</strong> for IP telephony; <strong>Bose, Ahuja, Shure</strong> and <strong>ProSound</strong> for audio; and <strong>Lampro, Samsung</strong> and partner brands for LED displays and interactive panels.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="faq-question">
+                        <span itemprop="name">Do you provide installation and after-sales support?</span>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                            Yes. Every project includes <strong>site survey, design, supply, installation, commissioning, user training and ongoing maintenance</strong>. Our local technicians cover Al Khobar, Al Jubail, Dammam, Riyadh and Jeddah, and we offer annual maintenance contracts (AMC) with same-day response in the Eastern Province.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="faq-question">
+                        <span itemprop="name">How do I request a quote?</span>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                            Call <a href="tel:+966138226660"><strong>+966 13 822 6660</strong></a>, send WhatsApp to <a href="https://wa.me/966541652927" target="_blank" rel="noopener"><strong>+966 54 165 2927</strong></a>, email <a href="mailto:info@visionangles.com"><strong>info@visionangles.com</strong></a>, or fill in the form below. Quotes are typically returned within <strong>one business day</strong>.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="faq-question">
+                        <span itemprop="name">What are your working hours?</span>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                            Head office (Al Khobar): <strong>Saturday&ndash;Thursday, 8:00 AM &ndash; 6:00 PM</strong>. Showrooms (Al Khobar &amp; Al Jubail): <strong>Saturday&ndash;Thursday, 8:00 AM &ndash; 9:00 PM</strong>. Closed Fridays.
+                        </p>
+                    </div>
+                </details>
+
             </div>
         </div>
     </section>
@@ -893,8 +1248,62 @@
                     <span class="label-dot"></span>
                     Get In Touch
                 </span>
-                <h2 class="contact-title">Contact Us</h2>
-                <p class="contact-subtitle">Have a question or need assistance? We're here to help! Contact Visionangles Security for expert guidance on CCTV cameras, access control systems, video intercoms, burglar alarms, network solutions, and integrated ELV services. Our team in Al Khobar, Al Jubail, Riyadh, and Jeddah is ready to provide customized solutions for your security needs.</p>
+                <h2 class="contact-title">
+                    Let's Talk <span class="contact-title-accent">Security</span>
+                </h2>
+                <p class="contact-subtitle">
+                    Tell us what you're protecting &mdash; a home, a shop, an office, or a full site &mdash; and we'll guide you to the right CCTV, access control, intercom, alarm, or network setup. Local teams in Al Khobar, Al Jubail, Riyadh &amp; Jeddah, ready to help.
+                </p>
+
+                <!-- Quick contact strip -->
+                <ul class="contact-quick" role="list">
+                    <li class="contact-quick-item">
+                        <a href="tel:+966138226660">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>
+                                <small>Call</small>
+                                +966 13 822 6660
+                            </span>
+                        </a>
+                    </li>
+                    <li class="contact-quick-item">
+                        <a href="https://wa.me/966541652927" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/>
+                            </svg>
+                            <span>
+                                <small>WhatsApp</small>
+                                +966 54 165 2927
+                            </span>
+                        </a>
+                    </li>
+                    <li class="contact-quick-item">
+                        <a href="mailto:info@visionangles.com">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>
+                                <small>Email</small>
+                                info@visionangles.com
+                            </span>
+                        </a>
+                    </li>
+                    <li class="contact-quick-item contact-quick-item--static">
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <span>
+                                <small>Working Hours</small>
+                                Sat &ndash; Thu &middot; 8AM &ndash; 9PM
+                            </span>
+                        </span>
+                    </li>
+                </ul>
             </div>
 
             <div class="contact-wrapper contact-wrapper-centered">
