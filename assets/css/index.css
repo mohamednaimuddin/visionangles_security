@@ -6887,11 +6887,15 @@ a.brand-logo-item {
     box-shadow: 0 0 8px #f4d265;
 }
 .faq-title {
-    font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+    font-size: clamp(1.5rem, 6vw, 2.8rem);
     font-weight: 800;
     color: #ffffff;
-    line-height: 1.15;
+    line-height: 1.18;
     margin: 0 0 14px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    text-wrap: balance;
 }
 .faq-title-accent {
     background: linear-gradient(135deg, #f4d265 0%, #c9a227 50%, #8b6f1a 100%);
@@ -6900,6 +6904,12 @@ a.brand-logo-item {
     -webkit-text-fill-color: transparent;
     color: transparent;
     font-style: italic;
+    /* Italic glyphs (the slanted "k") overhang their box; without extra
+       inline padding the descender is clipped by background-clip:text
+       and by the section's overflow:hidden. */
+    display: inline-block;
+    padding-right: 0.25em;
+    margin-right: -0.1em;
 }
 .faq-subtitle {
     font-size: 1rem;
@@ -6955,6 +6965,62 @@ a.brand-logo-item {
 
 @media (max-width: 600px) {
     .faq-section { padding: 70px 4% 60px; }
-    .faq-question { padding: 16px 18px; font-size: 0.95rem; }
+    .faq-header { margin-bottom: 36px; }
+    .faq-title { line-height: 1.22; }
+    .faq-subtitle { font-size: 0.92rem; }
+    .faq-question { padding: 16px 18px; font-size: 0.95rem; gap: 12px; }
     .faq-answer { padding: 0 18px 18px; font-size: 0.92rem; }
+}
+
+@media (max-width: 380px) {
+    .faq-section { padding: 60px 4% 50px; }
+    .faq-title { font-size: 1.55rem; }
+    .faq-question { padding: 14px 16px; font-size: 0.9rem; }
+    .faq-answer { padding: 0 16px 16px; font-size: 0.88rem; }
+}
+
+/* ============================================================
+   GLOBAL FIX — italic gradient-text accents
+   ------------------------------------------------------------
+   When you combine `font-style: italic` with
+   `background-clip: text`, the slanted glyph (k, f, y, j …)
+   overhangs its inline box. The gradient box clips to the box,
+   so the right edge of the letter shows as a straight cut.
+   This single rule fixes every section that uses the pattern
+   (Mission&Vision, Branches, Contact, FAQ).
+   ============================================================ */
+.purpose-title-accent,
+.loc-title-accent,
+.contact-title-accent,
+.faq-title-accent {
+    display: inline-block;
+    padding-right: 0.28em;   /* room for the italic overhang */
+    margin-right: -0.12em;   /* keep visual spacing identical */
+    line-height: 1.15;       /* prevent vertical clipping too */
+    overflow: visible;
+}
+
+/* Make sure no parent clips the overhanging glyph */
+.purpose-title,
+.branches-title,
+.contact-title,
+.faq-title {
+    overflow: visible;
+}
+
+/* Contact title — match responsive scaling of the other section
+   titles so "Security" never collides with a tight container */
+.contact-title {
+    font-size: clamp(1.5rem, 6vw, 2.8rem);
+    line-height: 1.18;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    text-wrap: balance;
+}
+
+@media (max-width: 600px) {
+    .contact-title { line-height: 1.22; }
+}
+@media (max-width: 380px) {
+    .contact-title { font-size: 1.55rem; }
 }

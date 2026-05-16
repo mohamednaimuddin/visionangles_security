@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unica+One&family=Aladdin&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/index.css?v=20260514">
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="assets/js/vendor/leaflet.css" />
     <link rel="canonical" href="https://www.visionangles.com/">
@@ -159,6 +159,7 @@
           "name": "Vision Angles Security — Al Khobar Showroom",
           "parentOrganization": { "@id": "https://www.visionangles.com/#organization" },
           "url": "https://www.visionangles.com/contact.html",
+          "image": "https://www.visionangles.com/assets/images/visionnew.png",
           "telephone": "+966-54-165-2927",
           "email": "sales@visionangles.com",
           "priceRange": "$$",
@@ -183,6 +184,7 @@
           "name": "Vision Angles Security — Al Jubail Showroom",
           "parentOrganization": { "@id": "https://www.visionangles.com/#organization" },
           "url": "https://www.visionangles.com/contact.html",
+          "image": "https://www.visionangles.com/assets/images/visionnew.png",
           "telephone": "+966-56-683-5669",
           "email": "sales@visionangles.com",
           "priceRange": "$$",
@@ -1157,76 +1159,78 @@
                 </p>
             </div>
 
-            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <!-- Visible FAQ — structured data is provided once via JSON-LD in <head>.
+                 Microdata intentionally omitted here to avoid duplicate FAQPage entities. -->
+            <div class="faq-list">
 
-                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" open>
+                <details class="faq-item" open>
                     <summary class="faq-question">
-                        <span itemprop="name">What services does Vision Angles Security provide in Saudi Arabia?</span>
+                        <span>What services does Vision Angles Security provide in Saudi Arabia?</span>
                         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
                     </summary>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">
+                    <div class="faq-answer">
+                        <p>
                             Vision Angles Security is a full-service ELV and security systems integrator in Saudi Arabia. We supply, install and maintain <strong>CCTV and IP surveillance, access control, video intercom, burglar alarms, network infrastructure, public-address audio, thermal cameras, LED displays, speed gates, interactive flat panels and parking management systems</strong>. We serve homes, retail shops, offices, schools and industrial sites across Al Khobar, Al Jubail, Dammam, Riyadh and Jeddah.
                         </p>
                     </div>
                 </details>
 
-                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details class="faq-item">
                     <summary class="faq-question">
-                        <span itemprop="name">Where is Vision Angles Security located?</span>
+                        <span>Where is Vision Angles Security located?</span>
                         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
                     </summary>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">
+                    <div class="faq-answer">
+                        <p>
                             Our head office is in <strong>Al Khobar (postal code 34714), Eastern Province, Saudi Arabia</strong>. We operate two showrooms &mdash; Al Khobar and Al Jubail &mdash; and two regional offices in Riyadh (Central Region) and Jeddah (Western Region).
                         </p>
                     </div>
                 </details>
 
-                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details class="faq-item">
                     <summary class="faq-question">
-                        <span itemprop="name">Which security brands does Vision Angles Security install?</span>
+                        <span>Which security brands does Vision Angles Security install?</span>
                         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
                     </summary>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">
+                    <div class="faq-answer">
+                        <p>
                             We are an authorized integrator and partner for <strong>Hikvision, Dahua, ZKTeco, EZVIZ, Bosch, Hanwha, Paradox</strong> and <strong>Ajax</strong> for surveillance and alarms; <strong>Sophos, Fortinet, WatchGuard, Cisco, TP-Link, D-Link</strong> and <strong>Ruijie</strong> for network and security infrastructure; <strong>Grandstream</strong> and <strong>Cisco</strong> for IP telephony; <strong>Bose, Ahuja, Shure</strong> and <strong>ProSound</strong> for audio; and <strong>Lampro, Samsung</strong> and partner brands for LED displays and interactive panels.
                         </p>
                     </div>
                 </details>
 
-                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details class="faq-item">
                     <summary class="faq-question">
-                        <span itemprop="name">Do you provide installation and after-sales support?</span>
+                        <span>Do you provide installation and after-sales support?</span>
                         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
                     </summary>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">
+                    <div class="faq-answer">
+                        <p>
                             Yes. Every project includes <strong>site survey, design, supply, installation, commissioning, user training and ongoing maintenance</strong>. Our local technicians cover Al Khobar, Al Jubail, Dammam, Riyadh and Jeddah, and we offer annual maintenance contracts (AMC) with same-day response in the Eastern Province.
                         </p>
                     </div>
                 </details>
 
-                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details class="faq-item">
                     <summary class="faq-question">
-                        <span itemprop="name">How do I request a quote?</span>
+                        <span>How do I request a quote from Vision Angles Security?</span>
                         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
                     </summary>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">
-                            Call <a href="tel:+966138226660"><strong>+966 13 822 6660</strong></a>, send WhatsApp to <a href="https://wa.me/966541652927" target="_blank" rel="noopener"><strong>+966 54 165 2927</strong></a>, email <a href="mailto:info@visionangles.com"><strong>info@visionangles.com</strong></a>, or fill in the form below. Quotes are typically returned within <strong>one business day</strong>.
+                    <div class="faq-answer">
+                        <p>
+                            You can request a quote by calling <a href="tel:+966138226660"><strong>+966 13 822 6660</strong></a>, sending WhatsApp to <a href="https://wa.me/966541652927" target="_blank" rel="noopener"><strong>+966 54 165 2927</strong></a>, emailing <a href="mailto:info@visionangles.com"><strong>info@visionangles.com</strong></a>, or submitting the contact form at <a href="https://www.visionangles.com/contact.html"><strong>visionangles.com/contact</strong></a>. Quotes are typically returned within <strong>one business day</strong>.
                         </p>
                     </div>
                 </details>
 
-                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details class="faq-item">
                     <summary class="faq-question">
-                        <span itemprop="name">What are your working hours?</span>
+                        <span>What are Vision Angles Security's working hours?</span>
                         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
                     </summary>
-                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">
-                            Head office (Al Khobar): <strong>Saturday&ndash;Thursday, 8:00 AM &ndash; 6:00 PM</strong>. Showrooms (Al Khobar &amp; Al Jubail): <strong>Saturday&ndash;Thursday, 8:00 AM &ndash; 9:00 PM</strong>. Closed Fridays.
+                    <div class="faq-answer">
+                        <p>
+                            Our head office in Al Khobar operates <strong>Saturday to Thursday, 8:00 AM to 6:00 PM</strong>. The Al Khobar and Al Jubail showrooms are open <strong>Saturday to Thursday, 8:00 AM to 9:00 PM</strong>. We are closed on Fridays.
                         </p>
                     </div>
                 </details>
