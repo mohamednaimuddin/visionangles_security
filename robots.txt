@@ -1,12 +1,46 @@
-# robots.txt for https://www.visionangles.com/
-# Allow all well-behaved crawlers to index the public site
+# =========================================================
+# robots.txt for Vision Angles Technologies
+# Website: https://www.visionangles.com/
+# Optimized for SEO, Security & AI Crawlers
+# Updated: 2026-05-18
+# =========================================================
+
+# -------------------------
+# GLOBAL RULES
+# -------------------------
 
 User-agent: *
 Allow: /
-Disallow: /cgi-bin/
-Disallow: /*.json$
 
-# Block common bad bots (optional)
+# Sensitive / System Paths
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /logs/
+Disallow: /backup/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /.env
+
+# Block unnecessary file indexing
+Disallow: /*.json$
+Disallow: /*.log$
+Disallow: /*.sql$
+Disallow: /*.bak$
+Disallow: /*.old$
+
+# Allow important assets
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Crawl optimization
+Crawl-delay: 5
+
+# -------------------------
+# BLOCK AGGRESSIVE SEO BOTS
+# -------------------------
+
 User-agent: AhrefsBot
 Disallow: /
 
@@ -16,8 +50,49 @@ Disallow: /
 User-agent: MJ12bot
 Disallow: /
 
-# Sitemap location
+User-agent: DotBot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+# -------------------------
+# AI / LLM CRAWL POLICY
+# -------------------------
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Common Crawl
+User-agent: CCBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# -------------------------
+# SITEMAP
+# -------------------------
+
 Sitemap: https://www.visionangles.com/sitemap.xml
 
-# LLM / AI discovery manifest
+# -------------------------
+# LLM DISCOVERY MANIFEST
+# -------------------------
+
+# AI-readable site manifest
 # https://www.visionangles.com/llms.txt
