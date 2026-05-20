@@ -5783,8 +5783,14 @@ a.brand-logo-item {
 
 .footer-contact .contact-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 15px;
+    width: 100%;
+    padding: 10px 16px;
+}
+
+.footer-contact .contact-item::before {
+    display: none;
 }
 
 .footer-contact .contact-icon {
@@ -5818,6 +5824,8 @@ a.brand-logo-item {
 .contact-text p {
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.8);
+    line-height: 1.35;
+    font-variant-numeric: tabular-nums;
     margin: 0;
 }
 
@@ -6061,8 +6069,10 @@ a.brand-logo-item {
     }
 
     .footer-contact .contact-item {
-        justify-content: center;
+        justify-content: flex-start;
         text-align: left;
+        max-width: 360px;
+        margin: 0 auto;
     }
 
     .newsletter-content {
