@@ -2,7 +2,7 @@
 # robots.txt for Vision Angles Technologies
 # Website: https://www.visionangles.com/
 # Optimized for SEO, Security & AI Crawlers
-# Updated: 2026-05-18
+# Updated: 2026-05-25
 # =========================================================
 
 # -------------------------

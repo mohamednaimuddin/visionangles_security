@@ -12,6 +12,290 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Local Arabic language switcher. Keeps users on-site and avoids third-party translation widgets.
+document.addEventListener('DOMContentLoaded', function() {
+    const languageToggles = document.querySelectorAll('[data-language-toggle]');
+    const languageStorageKey = 'visionangles-language';
+    const originalText = new WeakMap();
+    const originalAttrs = new WeakMap();
+
+    const translations = {
+        'Initializing Experience...': 'جاري تهيئة التجربة...',
+        'Dashboard': 'الرئيسية',
+        'Products': 'المنتجات',
+        'Network Products': 'منتجات الشبكات',
+        'Video Intercom': 'إنتركم مرئي',
+        'Access Control': 'التحكم بالدخول',
+        'LED Displays': 'شاشات LED',
+        'Surveillance Solutions': 'حلول المراقبة',
+        'Speed Gates and Turnstiles': 'بوابات السرعة والدوارات',
+        'Interactive Flat Panel Displays': 'الشاشات التفاعلية المسطحة',
+        'Thermal': 'الكاميرات الحرارية',
+        'Audio Products': 'منتجات الصوت',
+        'Alarm': 'أنظمة الإنذار',
+        'Parking Management': 'إدارة المواقف',
+        'Accessories': 'الملحقات',
+        'IP Phones': 'هواتف IP',
+        'Web Development': 'تطوير الويب',
+        'Solutions': 'الحلول',
+        'Partners': 'الشركاء',
+        'About': 'من نحن',
+        'Contact': 'تواصل معنا',
+        'CCTV & ELV Security Solutions in Saudi Arabia': 'حلول CCTV و ELV الأمنية في المملكة العربية السعودية',
+        '"Securing Tomorrow, Protecting Today"': '"نؤمن الغد ونحمي اليوم"',
+        '"Innovation Meets Security"': '"حيث يلتقي الابتكار بالأمان"',
+        '"Your Safety, Our Priority"': '"سلامتك أولويتنا"',
+        'Scroll': 'تمرير',
+        'Our Products': 'منتجاتنا',
+        'Smart Safety Systems': 'أنظمة سلامة ذكية',
+        'Browse our range of modern cameras, alarms, and smart access tools built to keep your space safe.': 'تصفح مجموعتنا من الكاميرات الحديثة والإنذارات وأدوات الدخول الذكية المصممة لحماية مساحتك.',
+        'Biometric & Card Reader': 'قارئ بصمة وبطاقات',
+        'Access': 'دخول',
+        'Smart access with smartphone control': 'دخول ذكي بتحكم من الهاتف',
+        'Professional': 'احترافي',
+        'Network Systems': 'أنظمة الشبكات',
+        'Strong wired and Wi-Fi setups for offices, shops, and homes. Stay online and stay fast.': 'حلول سلكية ولاسلكية قوية للمكاتب والمتاجر والمنازل. ابق متصلا وبسرعة عالية.',
+        'Infrastructure': 'البنية التحتية',
+        'Thermal Camera': 'كاميرا حرارية',
+        'Heat detection technology': 'تقنية كشف الحرارة',
+        'Advanced': 'متقدم',
+        'Network Video Recorder (NVR) & IP Surveillance Camera': 'مسجل فيديو شبكي (NVR) وكاميرات مراقبة IP',
+        'A centralized high-capacity video storage and management system enabling high-definition digital monitoring with seamless network connectivity.': 'نظام مركزي عالي السعة لتخزين وإدارة الفيديو يتيح مراقبة رقمية عالية الدقة مع اتصال شبكي سلس.',
+        'Surveillance': 'المراقبة',
+        'Enterprise Audio System': 'نظام صوت للمؤسسات',
+        'High-fidelity sound with network integration for corporate buildings': 'صوت عالي الجودة مع تكامل شبكي للمباني المؤسسية',
+        'Commercial Audio': 'صوت تجاري',
+        'Modern Burglar Alarm System': 'نظام إنذار سرقة حديث',
+        'A smart wireless alarm with live alerts on your phone. Get warned the moment something goes wrong.': 'إنذار لاسلكي ذكي مع تنبيهات مباشرة على هاتفك. يصلك التحذير فور حدوث أي طارئ.',
+        'Safety Systems': 'أنظمة السلامة',
+        'Our Software': 'برمجياتنا',
+        'Web Development Services': 'خدمات تطوير الويب',
+        'We build custom web apps, SaaS tools, and smart digital products for modern teams.': 'نبني تطبيقات ويب مخصصة وأدوات SaaS ومنتجات رقمية ذكية للفرق الحديثة.',
+        'Attendance System': 'نظام الحضور',
+        'Cloud-based tracking without hardware': 'تتبع سحابي بدون أجهزة',
+        'No Hardware Required': 'لا يحتاج إلى أجهزة',
+        'Expense Tracker': 'متتبع المصروفات',
+        'Automated expense management & reporting': 'إدارة وتقارير مصروفات آلية',
+        'Financial': 'مالي',
+        'Stock Management': 'إدارة المخزون',
+        'Real-time inventory control & alerts': 'تحكم وتنبيهات للمخزون في الوقت الفعلي',
+        'Inventory': 'المخزون',
+        'Popular': 'شائع',
+        'Custom Web Apps': 'تطبيقات ويب مخصصة',
+        'Web tools shaped to fit the way your business works.': 'أدوات ويب مصممة لتناسب طريقة عمل شركتك.',
+        'Web & Mobile Apps': 'تطبيقات ويب وجوال',
+        'Who We Are': 'من نحن',
+        'Mission &': 'الرسالة و',
+        'Vision': 'الرؤية',
+        'A Saudi-based team keeping homes, shops, schools, and offices safe.': 'فريق سعودي يحافظ على أمان المنازل والمتاجر والمدارس والمكاتب.',
+        'We plan, install, and care for smart cameras, alarms, smart locks, and intercoms.': 'نخطط ونركب ونعتني بالكاميرات الذكية والإنذارات والأقفال الذكية والإنتركم.',
+        'Our goal is simple — we want you to feel calm and in control of your space.': 'هدفنا بسيط: أن تشعر بالطمأنينة والسيطرة على مساحتك.',
+        'Reach out and let us help you pick the right setup.': 'تواصل معنا ودعنا نساعدك في اختيار التجهيز المناسب.',
+        'Years of trust': 'سنوات من الثقة',
+        'Cities served': 'مدن نخدمها',
+        'Support & care': 'دعم ورعاية',
+        'Serving across KSA': 'نخدم في أنحاء المملكة',
+        'Talk to our team': 'تحدث إلى فريقنا',
+        'Our Mission': 'رسالتنا',
+        'Protecting What Matters Most': 'حماية ما يهمك أكثر',
+        'Modern, easy-to-use safety tools that guard the people and places you care about — built to last and simple to live with.': 'أدوات سلامة حديثة وسهلة الاستخدام تحمي الأشخاص والأماكن التي تهتم بها، مصممة لتدوم وتكون بسيطة في الاستخدام.',
+        'Our Vision': 'رؤيتنا',
+        'Leading the Future of Safety': 'قيادة مستقبل السلامة',
+        'To be a regional leader in smart safety — setting fresh marks for new ideas, quality, and trust across the Kingdom.': 'أن نكون روادا إقليميا في السلامة الذكية، ونضع معايير جديدة للأفكار والجودة والثقة في أنحاء المملكة.',
+        'Trusted By Industry Leaders': 'موثوقون من قادة القطاع',
+        'Our': 'شركاؤنا',
+        'Brand Partners': 'من العلامات التجارية',
+        'Presence Across': 'حضورنا في',
+        'Saudi Arabia': 'المملكة العربية السعودية',
+        'Visit our showrooms, reach our regional teams, or contact the head office for project planning and support.': 'زر معارضنا أو تواصل مع فرقنا الإقليمية أو مع المكتب الرئيسي لتخطيط المشاريع والدعم.',
+        'Locations': 'مواقع',
+        'Showrooms': 'معارض',
+        'Regional Offices': 'مكاتب إقليمية',
+        'Nationwide Reach': 'تغطية على مستوى المملكة',
+        'Head Office': 'المكتب الرئيسي',
+        'Al Khobar — Head Office': 'الخبر - المكتب الرئيسي',
+        'Al Khobar Showroom': 'معرض الخبر',
+        'Al Jubail Showroom': 'معرض الجبيل',
+        'Commercial Shop — Eastern Province, KSA': 'محل تجاري - المنطقة الشرقية، المملكة',
+        'Central Region Office, KSA': 'مكتب المنطقة الوسطى، المملكة',
+        'Western Region Office, KSA': 'مكتب المنطقة الغربية، المملكة',
+        'Sat – Thu · 8AM – 6PM': 'السبت - الخميس · 8 صباحا - 6 مساء',
+        'Sat – Thu · 8AM – 9PM': 'السبت - الخميس · 8 صباحا - 9 مساء',
+        'Get Directions': 'الاتجاهات',
+        'Why Modern Security': 'لماذا يستحق الأمن الحديث',
+        'Pays Off': 'الاستثمار',
+        'Real-world numbers show why integrated security is not just protection — it is risk reduction, operational visibility, and faster response.': 'تظهر الأرقام الواقعية أن الأمن المتكامل ليس حماية فقط، بل تقليل للمخاطر ورؤية تشغيلية واستجابة أسرع.',
+        'Average drop in property crime in areas with active CCTV monitoring.': 'متوسط انخفاض جرائم الممتلكات في المناطق التي تستخدم مراقبة CCTV نشطة.',
+        'Global video surveillance market size projected by 2030, growing at ~12% CAGR.': 'حجم سوق المراقبة بالفيديو عالميا المتوقع بحلول 2030 مع نمو يقارب 12% سنويا.',
+        'Saudi Arabia’s safety & security spend tied to Vision 2030 mega-projects (NEOM, Diriyah, Red Sea).': 'إنفاق السلامة والأمن في السعودية المرتبط بمشاريع رؤية 2030 الكبرى مثل نيوم والدرعية والبحر الأحمر.',
+        'Faster incident response when alarm, CCTV and access control are integrated on a single platform vs. siloed systems.': 'استجابة أسرع للحوادث عند دمج الإنذار والمراقبة والتحكم بالدخول في منصة واحدة بدلا من الأنظمة المنفصلة.',
+        'Answers Before You': 'إجابات قبل أن',
+        'Ask': 'تسأل',
+        'Quick answers about our security systems, installation areas, supported brands, and service process.': 'إجابات سريعة حول أنظمة الأمان ومناطق التركيب والعلامات المدعومة وطريقة الخدمة.',
+        'What services does Vision Angles Security provide in Saudi Arabia?': 'ما الخدمات التي تقدمها Vision Angles Security في السعودية؟',
+        'Where is Vision Angles Security located?': 'أين تقع Vision Angles Security؟',
+        'Which security brands does Vision Angles Security install?': 'ما العلامات الأمنية التي تركبها Vision Angles Security؟',
+        'Do you provide installation and after-sales support?': 'هل تقدمون التركيب والدعم بعد البيع؟',
+        'How do I request a quote from Vision Angles Security?': 'كيف أطلب عرض سعر من Vision Angles Security؟',
+        'What are Vision Angles Security\'s working hours?': 'ما ساعات عمل Vision Angles Security؟',
+        'How much does a CCTV installation cost in Saudi Arabia?': 'كم تكلفة تركيب كاميرات المراقبة في السعودية؟',
+        'Let\'s Talk': 'لنتحدث عن',
+        'Security': 'الأمان',
+        'Tell us what you want to protect. Our team will recommend the right cameras, access control, alarms, or network setup for your space.': 'أخبرنا بما تريد حمايته. سيوصي فريقنا بالكاميرات أو التحكم بالدخول أو الإنذارات أو الشبكات المناسبة لمساحتك.',
+        'Full Name': 'الاسم الكامل',
+        'Email Address': 'البريد الإلكتروني',
+        'Phone Number': 'رقم الهاتف',
+        'Subject': 'الموضوع',
+        'Select a subject': 'اختر الموضوع',
+        'General Inquiry': 'استفسار عام',
+        'Sales & Pricing': 'المبيعات والأسعار',
+        'Technical Support': 'الدعم الفني',
+        'Partnership': 'الشراكات',
+        'Other': 'أخرى',
+        'Select Branch': 'اختر الفرع',
+        'Select a branch': 'اختر الفرع',
+        'Message': 'الرسالة',
+        'Send Message': 'إرسال الرسالة',
+        'Sending...': 'جاري الإرسال...',
+        'Vision Angles Security': 'فيجن أنجلز سيكيوريتي',
+        'Securing Tomorrow, Protecting Today': 'نؤمن الغد ونحمي اليوم',
+        'A trusted name for smart safety gear in Saudi Arabia. We supply modern cameras, alarms, smart locks, and audio tools for homes and businesses. Our team plans, installs, and cares for every setup with you in mind.': 'اسم موثوق في حلول السلامة الذكية في السعودية. نوفر كاميرات حديثة وإنذارات وأقفالا ذكية وأدوات صوتية للمنازل والأعمال، مع تخطيط وتركيب ورعاية لكل مشروع.',
+        'Quick Links': 'روابط سريعة',
+        'Home': 'الرئيسية',
+        'About Us': 'من نحن',
+        'Our Branches': 'فروعنا',
+        'Contact Us': 'تواصل معنا',
+        'Our Products': 'منتجاتنا',
+        'Network Gear': 'معدات الشبكات',
+        'Speed Gates & Turnstiles': 'بوابات السرعة والدوارات',
+        'Interactive Flat Panels': 'الشاشات التفاعلية',
+        'Head Office': 'المكتب الرئيسي',
+        'Phone': 'الهاتف',
+        'Email': 'البريد الإلكتروني',
+        'Working Hours': 'ساعات العمل',
+        'Sat - Thu: 8AM - 6PM': 'السبت - الخميس: 8 صباحا - 6 مساء',
+        'Privacy Policy': 'سياسة الخصوصية',
+        'Terms of Service': 'شروط الخدمة',
+        'Editorial Policy': 'السياسة التحريرية',
+        'Chat with us!': 'تحدث معنا!',
+        'Enter your name': 'اكتب اسمك',
+        'Enter your email': 'اكتب بريدك الإلكتروني',
+        'Enter your phone number': 'اكتب رقم هاتفك',
+        'Write your message here...': 'اكتب رسالتك هنا...'
+    };
+
+    function rememberAttr(element, attr) {
+        if (!originalAttrs.has(element)) {
+            originalAttrs.set(element, {});
+        }
+        const attrs = originalAttrs.get(element);
+        if (!Object.prototype.hasOwnProperty.call(attrs, attr)) {
+            attrs[attr] = element.getAttribute(attr);
+        }
+        return attrs[attr];
+    }
+
+    function getStoredLanguage() {
+        try {
+            const storedLanguage = window.localStorage.getItem(languageStorageKey);
+            return storedLanguage === 'ar' || storedLanguage === 'en' ? storedLanguage : null;
+        } catch (error) {
+            return null;
+        }
+    }
+
+    function saveLanguage(language) {
+        try {
+            window.localStorage.setItem(languageStorageKey, language);
+        } catch (error) {
+            // Some browser modes block localStorage; the URL parameter still keeps the language state.
+        }
+    }
+
+    function setLanguage(language, shouldPersist = true) {
+        const isArabic = language === 'ar';
+        document.documentElement.lang = isArabic ? 'ar' : 'en';
+        document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+        document.body.classList.toggle('is-arabic', isArabic);
+        if (shouldPersist) {
+            saveLanguage(language);
+        }
+
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+            acceptNode(node) {
+                const parent = node.parentElement;
+                if (!parent || ['SCRIPT', 'STYLE', 'SVG'].includes(parent.tagName)) {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                return node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+            }
+        });
+
+        while (walker.nextNode()) {
+            const node = walker.currentNode;
+            if (!originalText.has(node)) {
+                originalText.set(node, node.nodeValue);
+            }
+            const source = originalText.get(node);
+            const key = source.trim();
+            node.nodeValue = isArabic && translations[key]
+                ? source.replace(key, translations[key])
+                : source;
+        }
+
+        document.querySelectorAll('[placeholder], [aria-label], [title], img[alt]').forEach(element => {
+            ['placeholder', 'aria-label', 'title', 'alt'].forEach(attr => {
+                if (!element.hasAttribute(attr)) return;
+                const source = rememberAttr(element, attr);
+                element.setAttribute(attr, isArabic && translations[source] ? translations[source] : source);
+            });
+        });
+
+        languageToggles.forEach(languageToggle => {
+            const label = languageToggle.querySelector('span');
+            if (label) label.textContent = isArabic ? 'English' : 'العربية';
+            languageToggle.setAttribute('href', isArabic ? '?lang=en' : '?lang=ar');
+            languageToggle.setAttribute('lang', isArabic ? 'en' : 'ar');
+            languageToggle.setAttribute('aria-label', isArabic ? 'Switch to English' : 'Translate this page to Arabic');
+        });
+    }
+
+    function updateUrl(language) {
+        const url = new URL(window.location.href);
+        if (language === 'ar') {
+            url.searchParams.set('lang', 'ar');
+        } else {
+            url.searchParams.delete('lang');
+        }
+        window.history.replaceState({}, '', url);
+    }
+
+    function getInitialLanguage() {
+        const urlLanguage = new URLSearchParams(window.location.search).get('lang');
+        if (urlLanguage === 'ar' || urlLanguage === 'en') {
+            return urlLanguage;
+        }
+        return getStoredLanguage() || 'en';
+    }
+
+    const initialLanguage = getInitialLanguage();
+    setLanguage(initialLanguage);
+    updateUrl(initialLanguage);
+
+    languageToggles.forEach(languageToggle => {
+        languageToggle.addEventListener('click', function(event) {
+            event.preventDefault();
+            const nextLanguage = document.documentElement.lang === 'ar' ? 'en' : 'ar';
+            setLanguage(nextLanguage);
+            updateUrl(nextLanguage);
+        });
+    });
+
+    window.addEventListener('pageshow', function() {
+        setLanguage(getInitialLanguage(), false);
+    });
+});
+
 // Slider functionality
 const slides = document.querySelectorAll('.hero-slide');
 const indicators = document.querySelectorAll('.indicator');

@@ -67,7 +67,7 @@ Services:
 ---
 
 ### Burglar Alarm Systems
-https://www.visionangles.com/burglar-alarm.html
+https://www.visionangles.com/buglar-alarm.html
 
 Services:
 - Wireless Alarm Systems
