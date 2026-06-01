@@ -78,6 +78,10 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 1002;
+    pointer-events: auto;
+    touch-action: manipulation;
 }
 
 .mobile-language-toggle:hover {
@@ -190,6 +194,12 @@ html[dir="rtl"] .brand-marquee-wrapper,
 html[dir="rtl"] .brand-marquee,
 html[dir="rtl"] .brand-marquee-content {
     direction: ltr;
+}
+
+html[dir="rtl"] .nav-contact .contact-item span[dir="ltr"],
+html[dir="rtl"] .footer-contact .contact-text a[dir="ltr"] {
+    direction: ltr;
+    unicode-bidi: isolate;
 }
 
 /* ==================== PREMIUM PAGE LOADER ==================== */
@@ -3135,14 +3145,19 @@ a.product-card-link {
 /* ===== Layout: 2 columns ===== */
 .purpose-layout {
     display: grid;
-    grid-template-columns: 1.05fr 1fr;
-    gap: 56px;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: clamp(32px, 4vw, 56px);
     align-items: center;
+}
+
+html[dir="rtl"] .purpose-layout {
+    direction: rtl;
 }
 
 /* ---------- LEFT: Story ---------- */
 .purpose-story {
     position: relative;
+    min-width: 0;
 }
 
 .purpose-lede {
@@ -3297,6 +3312,7 @@ a.product-card-link {
     display: grid;
     grid-template-columns: 1fr;
     gap: 22px;
+    min-width: 0;
 }
 
 .purpose-card {
@@ -3310,6 +3326,21 @@ a.product-card-link {
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     position: relative;
     overflow: hidden;
+    width: 100%;
+}
+
+html[dir="rtl"] .purpose-story,
+html[dir="rtl"] .purpose-card {
+    text-align: right;
+}
+
+html[dir="rtl"] .purpose-cities,
+html[dir="rtl"] .purpose-cta {
+    direction: rtl;
+}
+
+html[dir="rtl"] .city-pills {
+    justify-content: flex-start;
 }
 
 .purpose-card::before {
@@ -3431,6 +3462,10 @@ a.product-card-link {
     }
 
     .city-pills {
+        justify-content: center;
+    }
+
+    html[dir="rtl"] .city-pills {
         justify-content: center;
     }
 
@@ -5906,6 +5941,18 @@ a.brand-logo-item {
     margin: 0;
 }
 
+.footer-contact .contact-text a {
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
+    font-variant-numeric: inherit;
+    display: inline-block;
+}
+
+.footer-contact .contact-text a:hover {
+    color: #c9a227;
+}
+
 /* Newsletter Section */
 .footer-newsletter {
     padding: 50px 0;
@@ -6150,6 +6197,10 @@ a.brand-logo-item {
         text-align: left;
         max-width: 360px;
         margin: 0 auto;
+    }
+
+    html[dir="rtl"] .footer-contact .contact-item {
+        text-align: right;
     }
 
     .newsletter-content {

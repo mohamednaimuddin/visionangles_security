@@ -90,11 +90,17 @@ document.addEventListener('DOMContentLoaded', function() {
         'A Saudi-based team keeping homes, shops, schools, and offices safe.': 'فريق سعودي يحافظ على أمان المنازل والمتاجر والمدارس والمكاتب.',
         'We plan, install, and care for smart cameras, alarms, smart locks, and intercoms.': 'نخطط ونركب ونعتني بالكاميرات الذكية والإنذارات والأقفال الذكية والإنتركم.',
         'Our goal is simple — we want you to feel calm and in control of your space.': 'هدفنا بسيط: أن تشعر بالطمأنينة والسيطرة على مساحتك.',
+        'We plan, install, and care for smart cameras, alarms, smart locks, and intercoms. Our goal is simple — we want you to feel calm and in control of your space. Reach out and let us help you pick the right setup.': 'نخطط ونركب ونعتني بالكاميرات الذكية والإنذارات والأقفال الذكية والإنتركم. هدفنا بسيط: أن تشعر بالطمأنينة والسيطرة على مساحتك. تواصل معنا ودعنا نساعدك في اختيار التجهيز المناسب.',
         'Reach out and let us help you pick the right setup.': 'تواصل معنا ودعنا نساعدك في اختيار التجهيز المناسب.',
         'Years of trust': 'سنوات من الثقة',
         'Cities served': 'مدن نخدمها',
         'Support & care': 'دعم ورعاية',
         'Serving across KSA': 'نخدم في أنحاء المملكة',
+        'Al Khobar': 'الخبر',
+        'Al Jubail': 'الجبيل',
+        'Dammam': 'الدمام',
+        'Riyadh': 'الرياض',
+        'Jeddah': 'جدة',
         'Talk to our team': 'تحدث إلى فريقنا',
         'Our Mission': 'رسالتنا',
         'Protecting What Matters Most': 'حماية ما يهمك أكثر',
@@ -129,16 +135,51 @@ document.addEventListener('DOMContentLoaded', function() {
         'Global video surveillance market size projected by 2030, growing at ~12% CAGR.': 'حجم سوق المراقبة بالفيديو عالميا المتوقع بحلول 2030 مع نمو يقارب 12% سنويا.',
         'Saudi Arabia’s safety & security spend tied to Vision 2030 mega-projects (NEOM, Diriyah, Red Sea).': 'إنفاق السلامة والأمن في السعودية المرتبط بمشاريع رؤية 2030 الكبرى مثل نيوم والدرعية والبحر الأحمر.',
         'Faster incident response when alarm, CCTV and access control are integrated on a single platform vs. siloed systems.': 'استجابة أسرع للحوادث عند دمج الإنذار والمراقبة والتحكم بالدخول في منصة واحدة بدلا من الأنظمة المنفصلة.',
+        'Frequently Asked': 'الأسئلة الشائعة',
         'Answers Before You': 'إجابات قبل أن',
         'Ask': 'تسأل',
         'Quick answers about our security systems, installation areas, supported brands, and service process.': 'إجابات سريعة حول أنظمة الأمان ومناطق التركيب والعلامات المدعومة وطريقة الخدمة.',
-        'What services does Vision Angles Security provide in Saudi Arabia?': 'ما الخدمات التي تقدمها Vision Angles Security في السعودية؟',
-        'Where is Vision Angles Security located?': 'أين تقع Vision Angles Security؟',
-        'Which security brands does Vision Angles Security install?': 'ما العلامات الأمنية التي تركبها Vision Angles Security؟',
+        'Quick facts about Vision Angles Security — what we do, where we work, and how to reach us.': 'معلومات سريعة عن فيجن أنجلز سيكيوريتي: خدماتنا، مناطق عملنا، وطرق التواصل معنا.',
+        'What services does Vision Angles Security provide in Saudi Arabia?': 'ما الخدمات التي تقدمها فيجن أنجلز سيكيوريتي في السعودية؟',
+        'Where is Vision Angles Security located?': 'أين تقع فيجن أنجلز سيكيوريتي؟',
+        'Which security brands does Vision Angles Security install?': 'ما العلامات الأمنية التي تركبها فيجن أنجلز سيكيوريتي؟',
         'Do you provide installation and after-sales support?': 'هل تقدمون التركيب والدعم بعد البيع؟',
-        'How do I request a quote from Vision Angles Security?': 'كيف أطلب عرض سعر من Vision Angles Security؟',
-        'What are Vision Angles Security\'s working hours?': 'ما ساعات عمل Vision Angles Security؟',
+        'How do I request a quote from Vision Angles Security?': 'كيف أطلب عرض سعر من فيجن أنجلز سيكيوريتي؟',
+        'What are Vision Angles Security\'s working hours?': 'ما ساعات عمل فيجن أنجلز سيكيوريتي؟',
         'How much does a CCTV installation cost in Saudi Arabia?': 'كم تكلفة تركيب كاميرات المراقبة في السعودية؟',
+        'Vision Angles Security provides CCTV and IP surveillance, access control, video intercom, burglar alarms, network infrastructure, public-address audio, thermal cameras, LED displays, speed gates, interactive flat panels and parking management across Saudi Arabia.': 'تقدم فيجن أنجلز سيكيوريتي حلول كاميرات المراقبة CCTV و IP، والتحكم بالدخول، والإنتركم المرئي، وأنظمة الإنذار، والبنية التحتية للشبكات، وأنظمة النداء الصوتي، والكاميرات الحرارية، وشاشات LED، وبوابات السرعة، والشاشات التفاعلية، وإدارة المواقف في جميع أنحاء السعودية.',
+        'We are a full-service ELV and security systems integrator. We serve homes, retail shops, offices, schools and industrial sites across Al Khobar, Al Jubail, Dammam, Riyadh and Jeddah.': 'نحن مزود متكامل لخدمات أنظمة ELV والأنظمة الأمنية. نخدم المنازل والمتاجر والمكاتب والمدارس والمواقع الصناعية في الخبر والجبيل والدمام والرياض وجدة.',
+        'Vision Angles Security is headquartered in Al Khobar (postal code 34714), Eastern Province, Saudi Arabia.': 'يقع المقر الرئيسي لفيجن أنجلز سيكيوريتي في الخبر (الرمز البريدي 34714)، المنطقة الشرقية، السعودية.',
+        'We operate two showrooms — Al Khobar and Al Jubail — and two regional offices in Riyadh (Central Region) and Jeddah (Western Region).': 'لدينا معرضان في الخبر والجبيل، ومكتبان إقليميان في الرياض (المنطقة الوسطى) وجدة (المنطقة الغربية).',
+        'Vision Angles Security installs Hikvision, Dahua, ZKTeco, EZVIZ, Bosch, Hanwha, Paradox and Ajax for surveillance and alarms;': 'تركب فيجن أنجلز سيكيوريتي علامات Hikvision وDahua وZKTeco وEZVIZ وBosch وHanwha وParadox وAjax للمراقبة والإنذارات؛',
+        'Sophos, Fortinet, WatchGuard, Cisco, TP-Link, D-Link': 'Sophos وFortinet وWatchGuard وCisco وTP-Link وD-Link',
+        'and': 'و',
+        'Ruijie': 'Ruijie',
+        'for network and security infrastructure;': 'للبنية التحتية للشبكات والأمن؛',
+        'Grandstream': 'Grandstream',
+        'Cisco': 'Cisco',
+        'for IP telephony;': 'للهواتف الشبكية IP؛',
+        'Bose, Ahuja, Shure': 'Bose وAhuja وShure',
+        'ProSound': 'ProSound',
+        'for audio; and': 'للصوت؛ و',
+        'Lampro, Samsung': 'Lampro وSamsung',
+        'and partner brands for LED displays and interactive panels.': 'وعلامات شريكة لشاشات LED والشاشات التفاعلية.',
+        'Yes — every Vision Angles Security project includes site survey, design, supply, installation, commissioning, user training and ongoing maintenance.': 'نعم، يشمل كل مشروع من فيجن أنجلز سيكيوريتي معاينة الموقع، والتصميم، والتوريد، والتركيب، والتشغيل، وتدريب المستخدمين، والصيانة المستمرة.',
+        'Our local technicians cover Al Khobar, Al Jubail, Dammam, Riyadh and Jeddah, and we offer annual maintenance contracts (AMC) with same-day response in the Eastern Province.': 'يغطي فنّيونا المحليون الخبر والجبيل والدمام والرياض وجدة، ونوفر عقود صيانة سنوية (AMC) مع استجابة في نفس اليوم في المنطقة الشرقية.',
+        'Request a quote from Vision Angles Security in three ways: call': 'يمكنك طلب عرض سعر من فيجن أنجلز سيكيوريتي بثلاث طرق: الاتصال على',
+        ', send WhatsApp to': '، أو إرسال واتساب إلى',
+        'send WhatsApp to': 'أو إرسال واتساب إلى',
+        ', or email': '، أو إرسال بريد إلكتروني إلى',
+        'or email': 'أو إرسال بريد إلكتروني إلى',
+        '. You can also submit the contact form at': '. يمكنك أيضا إرسال نموذج التواصل عبر',
+        'You can also submit the contact form at': 'يمكنك أيضا إرسال نموذج التواصل عبر',
+        '. Quotes are typically returned within': '. عادة يتم إرسال عروض الأسعار خلال',
+        'Quotes are typically returned within': 'عادة يتم إرسال عروض الأسعار خلال',
+        'one business day': 'يوم عمل واحد',
+        'Vision Angles Security\'s head office in Al Khobar is open Saturday to Thursday, 8:00 AM to 6:00 PM.': 'يفتح المقر الرئيسي لفيجن أنجلز سيكيوريتي في الخبر من السبت إلى الخميس، من 8:00 صباحا حتى 6:00 مساء.',
+        'The Al Khobar and Al Jubail showrooms are open Saturday to Thursday, 8:00 AM to 9:00 PM. All locations are closed on Fridays.': 'تفتح معارض الخبر والجبيل من السبت إلى الخميس، من 8:00 صباحا حتى 9:00 مساء. جميع الفروع مغلقة يوم الجمعة.',
+        'A small-business CCTV installation in Saudi Arabia typically starts from around SAR 1,500 for a 4-camera HD package and scales to SAR 25,000+ for enterprise sites with 16–64 IP cameras, NVR with RAID storage and VMS.': 'تبدأ تكلفة تركيب كاميرات CCTV للأعمال الصغيرة في السعودية عادة من حوالي 1,500 ريال لباقة 4 كاميرات HD، وقد تصل إلى أكثر من 25,000 ريال للمواقع الكبيرة التي تحتاج إلى 16-64 كاميرا IP مع جهاز NVR وتخزين RAID ونظام VMS.',
+        'Final pricing depends on camera count, resolution (2MP–8MP), cabling distance, storage retention (7–90 days) and any video analytics required. Vision Angles Security provides free on-site surveys and itemized quotes within one business day.': 'يعتمد السعر النهائي على عدد الكاميرات، والدقة (2MP-8MP)، ومسافة التمديدات، ومدة حفظ التسجيلات (7-90 يوما)، وأي تحليلات فيديو مطلوبة. تقدم فيجن أنجلز سيكيوريتي معاينة مجانية للموقع وعرض سعر مفصل خلال يوم عمل واحد.',
         'Let\'s Talk': 'لنتحدث عن',
         'Security': 'الأمان',
         'Tell us what you want to protect. Our team will recommend the right cameras, access control, alarms, or network setup for your space.': 'أخبرنا بما تريد حمايته. سيوصي فريقنا بالكاميرات أو التحكم بالدخول أو الإنذارات أو الشبكات المناسبة لمساحتك.',
@@ -212,6 +253,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function getTranslatedText(source, isArabic) {
+        if (!isArabic) return source;
+
+        const trimmed = source.trim();
+        const normalized = trimmed.replace(/\s+/g, ' ');
+        const translation = translations[trimmed] || translations[normalized];
+        if (!translation) return source;
+
+        const leadingWhitespace = source.match(/^\s*/)[0];
+        const trailingWhitespace = source.match(/\s*$/)[0];
+        return `${leadingWhitespace}${translation}${trailingWhitespace}`;
+    }
+
     function setLanguage(language, shouldPersist = true) {
         const isArabic = language === 'ar';
         document.documentElement.lang = isArabic ? 'ar' : 'en';
@@ -237,10 +291,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 originalText.set(node, node.nodeValue);
             }
             const source = originalText.get(node);
-            const key = source.trim();
-            node.nodeValue = isArabic && translations[key]
-                ? source.replace(key, translations[key])
-                : source;
+            node.nodeValue = getTranslatedText(source, isArabic);
         }
 
         document.querySelectorAll('[placeholder], [aria-label], [title], img[alt]').forEach(element => {
@@ -282,13 +333,33 @@ document.addEventListener('DOMContentLoaded', function() {
     setLanguage(initialLanguage);
     updateUrl(initialLanguage);
 
+    let lastLanguageToggleAt = 0;
+
+    function handleLanguageToggle(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const now = Date.now();
+        if (event.type === 'click' && now - lastLanguageToggleAt < 500) {
+            return;
+        }
+        lastLanguageToggleAt = now;
+
+        const nextLanguage = document.documentElement.lang === 'ar' ? 'en' : 'ar';
+        setLanguage(nextLanguage);
+        updateUrl(nextLanguage);
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navCenter = document.querySelector('.nav-center');
+        const navbar = document.getElementById('navbar');
+        mobileMenuBtn?.classList.remove('active');
+        navCenter?.classList.remove('mobile-open');
+        navbar?.classList.remove('menu-open');
+    }
+
     languageToggles.forEach(languageToggle => {
-        languageToggle.addEventListener('click', function(event) {
-            event.preventDefault();
-            const nextLanguage = document.documentElement.lang === 'ar' ? 'en' : 'ar';
-            setLanguage(nextLanguage);
-            updateUrl(nextLanguage);
-        });
+        languageToggle.addEventListener('click', handleLanguageToggle);
+        languageToggle.addEventListener('touchend', handleLanguageToggle, { passive: false });
     });
 
     window.addEventListener('pageshow', function() {
