@@ -15,7 +15,6 @@ window.addEventListener('scroll', function() {
 // Local Arabic language switcher. Keeps users on-site and avoids third-party translation widgets.
 document.addEventListener('DOMContentLoaded', function() {
     const languageToggles = document.querySelectorAll('[data-language-toggle]');
-    const languageStorageKey = 'visionangles-language';
     const originalText = new WeakMap();
     const originalAttrs = new WeakMap();
 
@@ -182,7 +181,11 @@ document.addEventListener('DOMContentLoaded', function() {
         'Final pricing depends on camera count, resolution (2MP–8MP), cabling distance, storage retention (7–90 days) and any video analytics required. Vision Angles Security provides free on-site surveys and itemized quotes within one business day.': 'يعتمد السعر النهائي على عدد الكاميرات، والدقة (2MP-8MP)، ومسافة التمديدات، ومدة حفظ التسجيلات (7-90 يوما)، وأي تحليلات فيديو مطلوبة. تقدم فيجن أنجلز سيكيوريتي معاينة مجانية للموقع وعرض سعر مفصل خلال يوم عمل واحد.',
         'Let\'s Talk': 'لنتحدث عن',
         'Security': 'الأمان',
+        'Get In Touch': 'تواصل معنا',
         'Tell us what you want to protect. Our team will recommend the right cameras, access control, alarms, or network setup for your space.': 'أخبرنا بما تريد حمايته. سيوصي فريقنا بالكاميرات أو التحكم بالدخول أو الإنذارات أو الشبكات المناسبة لمساحتك.',
+        'Tell us what you\'re protecting — a home, a shop, an office, or a full site — and we\'ll guide you to the right CCTV, access control, intercom, alarm, or network setup. Local teams in Al Khobar, Al Jubail, Riyadh & Jeddah, ready to help.': 'أخبرنا بما تريد حمايته، سواء كان منزلا أو متجرا أو مكتبا أو موقعا كاملا، وسنرشدك إلى الحل المناسب من كاميرات CCTV أو التحكم بالدخول أو الإنتركم أو الإنذار أو إعدادات الشبكات. فرقنا المحلية في الخبر والجبيل والرياض وجدة جاهزة لمساعدتك.',
+        'Call': 'اتصل',
+        'WhatsApp': 'واتساب',
         'Full Name': 'الاسم الكامل',
         'Email Address': 'البريد الإلكتروني',
         'Phone Number': 'رقم الهاتف',
@@ -236,23 +239,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return attrs[attr];
     }
 
-    function getStoredLanguage() {
-        try {
-            const storedLanguage = window.localStorage.getItem(languageStorageKey);
-            return storedLanguage === 'ar' || storedLanguage === 'en' ? storedLanguage : null;
-        } catch (error) {
-            return null;
-        }
-    }
-
-    function saveLanguage(language) {
-        try {
-            window.localStorage.setItem(languageStorageKey, language);
-        } catch (error) {
-            // Some browser modes block localStorage; the URL parameter still keeps the language state.
-        }
-    }
-
     function getTranslatedText(source, isArabic) {
         if (!isArabic) return source;
 
@@ -266,14 +252,11 @@ document.addEventListener('DOMContentLoaded', function() {
         return `${leadingWhitespace}${translation}${trailingWhitespace}`;
     }
 
-    function setLanguage(language, shouldPersist = true) {
+    function setLanguage(language) {
         const isArabic = language === 'ar';
         document.documentElement.lang = isArabic ? 'ar' : 'en';
         document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
         document.body.classList.toggle('is-arabic', isArabic);
-        if (shouldPersist) {
-            saveLanguage(language);
-        }
 
         const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
             acceptNode(node) {
@@ -326,7 +309,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (urlLanguage === 'ar' || urlLanguage === 'en') {
             return urlLanguage;
         }
-        return getStoredLanguage() || 'en';
+        return 'en';
     }
 
     const initialLanguage = getInitialLanguage();
@@ -363,7 +346,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     window.addEventListener('pageshow', function() {
-        setLanguage(getInitialLanguage(), false);
+        setLanguage(getInitialLanguage());
     });
 });
 

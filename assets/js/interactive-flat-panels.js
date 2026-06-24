@@ -8,15 +8,24 @@
     const loader = document.getElementById('loader');
     let resourcesLoaded = false;
     let minTimeElapsed = false;
+    let hardTimeoutElapsed = false;
     
     // Minimum display time for brand consistency
     setTimeout(() => {
         minTimeElapsed = true;
         hideLoaderIfReady();
     }, 600);
+
+    // Prevent long perceived load time when large media is still downloading.
+    setTimeout(() => {
+        hardTimeoutElapsed = true;
+        hideLoaderIfReady();
+    }, 1500);
     
     function hideLoaderIfReady() {
-        if (resourcesLoaded && minTimeElapsed && loader) {
+        if (!loader) return;
+
+        if ((resourcesLoaded && minTimeElapsed) || hardTimeoutElapsed) {
             loader.classList.add('loaded');
             requestAnimationFrame(() => {
                 setTimeout(() => {
@@ -26,14 +35,14 @@
         }
     }
     
-    if (document.readyState === 'complete') {
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
         resourcesLoaded = true;
         hideLoaderIfReady();
     } else {
-        window.addEventListener('load', function() {
+        document.addEventListener('DOMContentLoaded', function() {
             resourcesLoaded = true;
             hideLoaderIfReady();
-        });
+        }, { once: true });
     }
 })();
 
@@ -43,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize particle canvas
     initParticleCanvas();
+
+    // Defer hero video playback until it is visible
+    initHeroVideoOptimization();
     
     // Mobile menu
     initMobileMenu();
@@ -126,6 +138,14 @@ function initSliders() {
 function initParticleCanvas() {
     const canvas = document.getElementById('particleCanvas');
     if (!canvas) return;
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const saveData = navigator.connection && navigator.connection.saveData;
+    const isSmallScreen = window.innerWidth < 768;
+
+    if (reduceMotion || saveData || isSmallScreen) {
+        return;
+    }
     
     const ctx = canvas.getContext('2d');
     let particles = [];
@@ -214,12 +234,50 @@ function initParticleCanvas() {
     
     init();
     animate();
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            cancelAnimationFrame(animationId);
+        } else {
+            animate();
+        }
+    });
     
     window.addEventListener('resize', () => {
         cancelAnimationFrame(animationId);
         init();
         animate();
     });
+}
+
+/**
+ * Hero video optimization
+ */
+function initHeroVideoOptimization() {
+    const heroVideo = document.querySelector('.hero-video');
+    if (!heroVideo) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    if (!('IntersectionObserver' in window)) {
+        heroVideo.setAttribute('preload', 'metadata');
+        heroVideo.play().catch(() => {});
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                heroVideo.setAttribute('preload', 'metadata');
+                heroVideo.play().catch(() => {});
+            } else {
+                heroVideo.pause();
+            }
+        });
+    }, { threshold: 0.25 });
+
+    observer.observe(heroVideo);
 }
 
 /**
