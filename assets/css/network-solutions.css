@@ -2615,3 +2615,132 @@ img {
         flex: 1;
     }
 }
+
+/* Arabic language support */
+html[dir="rtl"] .page-hero-content,
+html[dir="rtl"] .brand-info,
+html[dir="rtl"] .service-card,
+html[dir="rtl"] .category-card,
+html[dir="rtl"] .product-details,
+html[dir="rtl"] .feature-item,
+html[dir="rtl"] .cta-content,
+html[dir="rtl"] .footer-brand,
+html[dir="rtl"] .footer-links-group,
+html[dir="rtl"] .footer-contact {
+    text-align: right;
+}
+
+html[dir="rtl"] .breadcrumb,
+html[dir="rtl"] .cta-buttons,
+html[dir="rtl"] .brand-title,
+html[dir="rtl"] .footer-logo,
+html[dir="rtl"] .footer-contact .contact-item {
+    direction: rtl;
+}
+
+html[dir="rtl"] .page-hero {
+    direction: ltr;
+    justify-content: flex-end;
+}
+
+html[dir="rtl"] .page-hero-content {
+    direction: rtl;
+    width: min(600px, calc(50% - 70px));
+    max-width: min(600px, calc(50% - 70px));
+}
+
+html[dir="rtl"] .page-hero-image {
+    left: 5%;
+    right: auto;
+}
+
+html[dir="rtl"] .breadcrumb {
+    justify-content: flex-start;
+}
+
+html[dir="rtl"] .section-header {
+    text-align: center;
+}
+
+html[dir="rtl"] .brands-intro .section-title,
+html[dir="rtl"] .brands-intro .section-desc {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+html[dir="rtl"] .brand-products-section .brand-header {
+    display: block;
+    text-align: right;
+}
+
+html[dir="rtl"] .brand-products-section .brand-title {
+    direction: rtl;
+    width: auto;
+    margin: 0 0 0 auto;
+    justify-content: flex-start;
+    text-align: right;
+}
+
+html[dir="rtl"] .brand-products-section .brand-title h3 {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .nav-contact .contact-item span[dir="ltr"],
+html[dir="rtl"] .footer-contact .contact-text a[dir="ltr"] {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+.footer-contact .contact-text a {
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
+    font-variant-numeric: inherit;
+    display: inline-block;
+}
+
+.footer-contact .contact-text a:hover {
+    color: #c9a227;
+}
+
+@media (max-width: 768px) {
+    html[dir="rtl"] .page-hero-content,
+    html[dir="rtl"] .brand-info,
+    html[dir="rtl"] .service-card,
+    html[dir="rtl"] .category-card,
+    html[dir="rtl"] .product-details,
+    html[dir="rtl"] .feature-item,
+    html[dir="rtl"] .cta-content,
+    html[dir="rtl"] .footer-brand,
+    html[dir="rtl"] .footer-links-group,
+    html[dir="rtl"] .footer-contact {
+        text-align: center;
+    }
+
+    html[dir="rtl"] .footer-contact .contact-item {
+        text-align: right;
+    }
+}
+
+@media (max-width: 992px) {
+    html[dir="rtl"] .page-hero {
+        direction: rtl;
+        justify-content: center;
+    }
+
+    html[dir="rtl"] .page-hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    html[dir="rtl"] .page-hero-image {
+        left: auto;
+        right: auto;
+    }
+
+    html[dir="rtl"] .breadcrumb {
+        justify-content: center;
+    }
+}

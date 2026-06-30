@@ -14,6 +14,7 @@ window.addEventListener('scroll', function() {
 
 // Local Arabic language switcher. Keeps users on-site and avoids third-party translation widgets.
 document.addEventListener('DOMContentLoaded', function() {
+    const SESSION_LANGUAGE_KEY = 'visionangles:language';
     const languageToggles = document.querySelectorAll('[data-language-toggle]');
     const originalText = new WeakMap();
     const originalAttrs = new WeakMap();
@@ -239,6 +240,10 @@ document.addEventListener('DOMContentLoaded', function() {
         return attrs[attr];
     }
 
+    function shouldSkipTranslation(element) {
+        return Boolean(element?.closest('.logo, .footer-logo'));
+    }
+
     function getTranslatedText(source, isArabic) {
         if (!isArabic) return source;
 
@@ -264,6 +269,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (!parent || ['SCRIPT', 'STYLE', 'SVG'].includes(parent.tagName)) {
                     return NodeFilter.FILTER_REJECT;
                 }
+                if (shouldSkipTranslation(parent)) {
+                    return NodeFilter.FILTER_REJECT;
+                }
                 return node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
             }
         });
@@ -278,6 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         document.querySelectorAll('[placeholder], [aria-label], [title], img[alt]').forEach(element => {
+            if (shouldSkipTranslation(element)) return;
             ['placeholder', 'aria-label', 'title', 'alt'].forEach(attr => {
                 if (!element.hasAttribute(attr)) return;
                 const source = rememberAttr(element, attr);
@@ -304,16 +313,39 @@ document.addEventListener('DOMContentLoaded', function() {
         window.history.replaceState({}, '', url);
     }
 
+    function saveSessionLanguage(language) {
+        try {
+            window.sessionStorage.setItem(SESSION_LANGUAGE_KEY, language);
+        } catch (error) {
+            // Ignore storage errors (private mode / blocked storage).
+        }
+    }
+
+    function getSessionLanguage() {
+        try {
+            const language = window.sessionStorage.getItem(SESSION_LANGUAGE_KEY);
+            return language === 'ar' || language === 'en' ? language : null;
+        } catch (error) {
+            return null;
+        }
+    }
+
     function getInitialLanguage() {
         const urlLanguage = new URLSearchParams(window.location.search).get('lang');
         if (urlLanguage === 'ar' || urlLanguage === 'en') {
+            saveSessionLanguage(urlLanguage);
             return urlLanguage;
+        }
+        const sessionLanguage = getSessionLanguage();
+        if (sessionLanguage) {
+            return sessionLanguage;
         }
         return 'en';
     }
 
     const initialLanguage = getInitialLanguage();
     setLanguage(initialLanguage);
+    saveSessionLanguage(initialLanguage);
     updateUrl(initialLanguage);
 
     let lastLanguageToggleAt = 0;
@@ -330,6 +362,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const nextLanguage = document.documentElement.lang === 'ar' ? 'en' : 'ar';
         setLanguage(nextLanguage);
+        saveSessionLanguage(nextLanguage);
         updateUrl(nextLanguage);
 
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -346,7 +379,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     window.addEventListener('pageshow', function() {
-        setLanguage(getInitialLanguage());
+        const language = getInitialLanguage();
+        setLanguage(language);
+        updateUrl(language);
     });
 });
 
