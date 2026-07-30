@@ -408,6 +408,22 @@
     flex-shrink: 0;
 }
 
+.bidi-ltr,
+html[dir="rtl"] .bidi-ltr,
+html[dir="rtl"] a[href^="tel"],
+html[dir="rtl"] a[href^="mailto"] {
+    direction: ltr;
+    unicode-bidi: isolate;
+    text-align: left;
+}
+
+html[dir="rtl"] input[type="tel"],
+html[dir="rtl"] input[type="email"] {
+    direction: ltr;
+    unicode-bidi: plaintext;
+    text-align: right;
+}
+
 .card-link {
     display: inline-flex;
     align-items: center;

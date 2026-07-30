@@ -271,6 +271,44 @@ document.addEventListener('DOMContentLoaded', function() {
         return `${leadingWhitespace}${translation}${trailingWhitespace}`;
     }
 
+    function fixFooterBottom(isArabic) {
+        const footerBottom = document.querySelector('.footer-bottom');
+        if (!footerBottom) return;
+
+        const copyright = footerBottom.querySelector('.footer-bottom-left p');
+        if (copyright) {
+            copyright.textContent = isArabic
+                ? '© 2026 فيجن أنجلز سيكيوريتي. جميع الحقوق محفوظة.'
+                : '© 2026 Vision Angles Security Systems. All Rights Reserved.';
+            copyright.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+            copyright.style.unicodeBidi = 'plaintext';
+        }
+
+        const linkLabels = isArabic
+            ? {
+                'privacy-policy.html': 'سياسة الخصوصية',
+                'terms-of-service.html': 'شروط الخدمة',
+                'editorial-policy.html': 'السياسة التحريرية'
+            }
+            : {
+                'privacy-policy.html': 'Privacy Policy',
+                'terms-of-service.html': 'Terms of Service',
+                'editorial-policy.html': 'Editorial Policy'
+            };
+
+        footerBottom.querySelectorAll('.footer-bottom-right a').forEach(link => {
+            const href = link.getAttribute('href') || '';
+            const key = Object.keys(linkLabels).find(path => href.endsWith(path));
+            if (key) link.textContent = linkLabels[key];
+        });
+
+        const legalLinks = footerBottom.querySelector('.footer-bottom-right');
+        if (legalLinks) {
+            legalLinks.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+            legalLinks.style.unicodeBidi = 'isolate';
+        }
+    }
+
     function setLanguage(language) {
         const isArabic = language === 'ar';
         document.documentElement.lang = isArabic ? 'ar' : 'en';
@@ -328,6 +366,8 @@ document.addEventListener('DOMContentLoaded', function() {
             languageToggle.setAttribute('lang', isArabic ? 'en' : 'ar');
             languageToggle.setAttribute('aria-label', isArabic ? 'Switch to English' : 'Translate this page to Arabic');
         });
+
+        fixFooterBottom(isArabic);
     }
 
     function updateUrl(language) {

@@ -6701,6 +6701,7 @@ a.brand-logo-item {
     font-size: 0.82rem;
     color: rgba(255,255,255,0.55);
     line-height: 1.4;
+    unicode-bidi: isolate;
 }
 
 /* Status pill */
@@ -6760,6 +6761,31 @@ a.brand-logo-item {
     transition: color 0.25s ease;
 }
 .loc-info-row a:hover { color: #f4d265; }
+
+.loc-info-row a[dir="ltr"],
+.loc-mini-link[dir="ltr"],
+.faq-answer a[dir="ltr"] {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .loc-card-region,
+html[dir="rtl"] .loc-card-city,
+html[dir="rtl"] .loc-chip,
+html[dir="rtl"] .loc-status,
+html[dir="rtl"] .branches-subtitle {
+    unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .loc-card-region[dir="auto"] {
+    direction: rtl;
+}
+
+html[dir="rtl"] .loc-info-row a[dir="ltr"],
+html[dir="rtl"] .loc-mini-link[dir="ltr"],
+html[dir="rtl"] .faq-answer a[dir="ltr"] {
+    text-align: left;
+}
 
 /* Direction button */
 .loc-btn {

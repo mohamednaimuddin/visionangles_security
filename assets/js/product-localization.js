@@ -279,7 +279,7 @@
         'Get a free consultation with our security experts and discover the perfect solution for your needs.': 'احصل على استشارة مجانية من خبرائنا الأمنيين واكتشف الحل الأنسب لاحتياجاتك.',
         'Websites That Grow Your Business': 'مواقع تنمّي أعمالك',
         'Full-Stack Web Development': 'تطوير ويب متكامل',
-        'We design and build fast, secure, and scalable websites � from clean company profiles to powerful web applications. Fully hosted, SEO-ready, and tailored to your brand.': 'نصمم ونبني مواقع سريعة وآمنة وقابلة للتوسع من مواقع الشركات التعريفية حتى تطبيقات الويب المتقدمة. مع استضافة كاملة وتجهيز لمحركات البحث وتخصيص كامل لهوية علامتك.',
+        'We design and build fast, secure, and scalable websites -from clean company profiles to powerful web applications. Fully hosted, SEO-ready, and tailored to your brand.': 'نصمم ونبني مواقع سريعة وآمنة وقابلة للتوسع من مواقع الشركات التعريفية حتى تطبيقات الويب المتقدمة. مع استضافة كاملة وتجهيز لمحركات البحث وتخصيص كامل لهوية علامتك.',
         'Get a Free Quote': 'احصل على عرض سعر مجاني',
         'Static': 'ثابتة',
         'Websites': 'مواقع',
@@ -288,12 +288,12 @@
         'Hosting': 'استضافة',
         'Optimized': 'محسنة',
         'Everything You Need to Go Online': 'كل ما تحتاجه للانطلاق على الإنترنت',
-        'From a simple company profile to a full web application � we design, build, host, and optimize your digital presence.': 'من موقع شركة بسيط إلى تطبيق ويب متكامل، نصمم ونطوّر ونستضيف ونحسن حضورك الرقمي بالكامل.',
+        'From a simple company profile to a full web application -we design, build, host, and optimize your digital presence.': 'من موقع شركة بسيط إلى تطبيق ويب متكامل، نصمم ونطوّر ونستضيف ونحسن حضورك الرقمي بالكامل.',
         'Static Sites': 'مواقع ثابتة',
         'Static Websites': 'مواقع ثابتة',
         'Lightning-fast sites with zero server costs': 'مواقع فائقة السرعة مع تكاليف خوادم شبه معدومة',
         'Request a Quote': 'اطلب عرض سعر',
-        'Perfect for company profiles, portfolios, landing pages, and blogs. Static websites load instantly, rank well on Google, and cost almost nothing to host � ideal for businesses that need a professional online presence without the complexity.': 'مثالية لمواقع الشركات التعريفية ومعارض الأعمال وصفحات الهبوط والمدونات. المواقع الثابتة تُحمَّل بسرعة كبيرة وتحقق ظهورا جيدا في Google وتكلفتها الاستضافية منخفضة جدا، وهي خيار مناسب للأعمال التي تحتاج حضورا احترافيا على الإنترنت بدون تعقيد.',
+        'Perfect for company profiles, portfolios, landing pages, and blogs. Static websites load instantly, rank well on Google, and cost almost nothing to host -ideal for businesses that need a professional online presence without the complexity.': 'مثالية لمواقع الشركات التعريفية ومعارض الأعمال وصفحات الهبوط والمدونات. المواقع الثابتة تُحمَّل بسرعة كبيرة وتحقق ظهورا جيدا في Google وتكلفتها الاستضافية منخفضة جدا، وهي خيار مناسب للأعمال التي تحتاج حضورا احترافيا على الإنترنت بدون تعقيد.',
         'Expense Tracker': 'متتبع المصروفات',
         'Automate, approve, and analyze every expense': 'أتمت واعتمد وحلل كل مصروف',
         'Expense Overview': 'ملخص المصروفات',
@@ -355,7 +355,7 @@
         'Bespoke': 'حسب الطلب',
         'Customized Dynamic Websites': 'مواقع ديناميكية مخصصة',
         'Fully tailored web applications built around your exact workflow': 'تطبيقات ويب مفصّلة بالكامل وفق سير العمل الخاص بك',
-        'Not every business fits a template. We design and develop fully custom dynamic websites from the ground up � with your own branding, features, user flows, and admin panel. Whether you need a booking platform, a customer portal, or a management system, we build it exactly the way you need it.': 'ليس كل نشاط يناسب القوالب الجاهزة. نصمم ونطوّر مواقع ديناميكية مخصصة بالكامل من الصفر مع هوية علامتك وميزاتك وتدفقات المستخدم ولوحة الإدارة الخاصة بك. سواء كنت تحتاج منصة حجز أو بوابة عملاء أو نظام إدارة، نبنيه بالطريقة التي تحتاجها تماما.',
+        'Not every business fits a template. We design and develop fully custom dynamic websites from the ground up -with your own branding, features, user flows, and admin panel. Whether you need a booking platform, a customer portal, or a management system, we build it exactly the way you need it.': 'ليس كل نشاط يناسب القوالب الجاهزة. نصمم ونطوّر مواقع ديناميكية مخصصة بالكامل من الصفر مع هوية علامتك وميزاتك وتدفقات المستخدم ولوحة الإدارة الخاصة بك. سواء كنت تحتاج منصة حجز أو بوابة عملاء أو نظام إدارة، نبنيه بالطريقة التي تحتاجها تماما.',
         'Custom User Roles & Login': 'صلاحيات مستخدمين وتسجيل دخول مخصص',
         'Tailored Admin Dashboard': 'لوحة إدارة مخصصة',
         'Custom Database Design': 'تصميم قاعدة بيانات مخصص',
@@ -364,20 +364,20 @@
         'Secure & Scalable Architecture': 'بنية آمنة وقابلة للتوسع',
         'Start Your Project': 'ابدأ مشروعك',
         'Your Website Live in 3 Simple Steps': 'موقعك جاهز للنشر في 3 خطوات بسيطة',
-        'Built for Your Business � Not a Template': 'مصمم لأعمالك وليس قالبا جاهزا',
+        'Built for Your Business -Not a Template': 'مصمم لأعمالك وليس قالبا جاهزا',
         'Built for Your Business - Not a Template': 'مصمم لأعمالك وليس قالبا جاهزا',
         'Let\'s Build Your Website': 'لنبدأ بناء موقعك',
         'No technical headaches. We handle everything from design to deployment.': 'بدون تعقيد تقني. نحن نتولى كل شيء من التصميم إلى النشر.',
         'Discover & Plan': 'الاكتشاف والتخطيط',
-        'We discuss your goals, audience, and content. You tell us your vision � we map out the right solution.': 'نناقش أهدافك وجمهورك ومحتواك. أنت تشرح رؤيتك ونحن نرسم الحل المناسب.',
+        'We discuss your goals, audience, and content. You tell us your vision -we map out the right solution.': 'نناقش أهدافك وجمهورك ومحتواك. أنت تشرح رؤيتك ونحن نرسم الحل المناسب.',
         'Design & Build': 'التصميم والبناء',
         'We design your site, write the code, and set up your hosting, domain, SSL, and email accounts.': 'نصمم موقعك ونكتب الكود ونجهز الاستضافة والدومين وSSL وحسابات البريد.',
         'Launch & Optimize': 'الإطلاق والتحسين',
         'We go live, submit to Google Search Console, and optimize for performance and search rankings.': 'نطلق الموقع، ونرسله إلى Google Search Console، ونحسن الأداء وترتيب نتائج البحث.',
-        'Built for Your Business � Not a Template': 'مبني لأعمالك وليس قالبا جاهزا',
-        "Every website we build is custom-crafted to your brand. We don't use cheap page builders � we write real code that performs, ranks, and lasts.": 'كل موقع نبنيه يتم تصميمه خصيصا لعلامتك. لا نستخدم أدوات صفحات رخيصة، بل نكتب كودا حقيقيا سريع الأداء وقابلا للنمو وطويل العمر.',
+        'Built for Your Business -Not a Template': 'مبني لأعمالك وليس قالبا جاهزا',
+        "Every website we build is custom-crafted to your brand. We don't use cheap page builders -we write real code that performs, ranks, and lasts.": 'كل موقع نبنيه يتم تصميمه خصيصا لعلامتك. لا نستخدم أدوات صفحات رخيصة، بل نكتب كودا حقيقيا سريع الأداء وقابلا للنمو وطويل العمر.',
         'Talk to an Expert': 'تحدث مع خبير',
-        'We optimize every page for speed � fast websites rank higher and convert better.': 'نحسن كل صفحة للسرعة لأن المواقع السريعة تحقق ترتيبا أعلى ومعدلات تحويل أفضل.',
+        'We optimize every page for speed -fast websites rank higher and convert better.': 'نحسن كل صفحة للسرعة لأن المواقع السريعة تحقق ترتيبا أعلى ومعدلات تحويل أفضل.',
         'All our sites are fully responsive and look great on any screen size.': 'كل مواقعنا متجاوبة بالكامل وتظهر بشكل ممتاز على جميع أحجام الشاشات.',
         'Proper meta tags, structured data, sitemaps, and Google Search Console setup included.': 'يشمل التنفيذ إعداد وسوم Meta بشكل صحيح والبيانات المنظمة وخرائط الموقع وربط Google Search Console.',
         'VPS servers, SSL certificates, and business email configured and maintained for you.': 'نوفر خوادم VPS وشهادات SSL وبريد أعمال مع إعداد وصيانة كاملة.',
@@ -403,7 +403,7 @@
         'Our Solutions': 'حلولنا',
         'Our Story': 'قصتنا',
         'About Visionangles Security Systems': 'عن Visionangles Security Systems',
-        'Serving businesses and homes nationwide � Eastern Province, Riyadh & Jeddah': 'نخدم الشركات والمنازل في جميع أنحاء المملكة من المنطقة الشرقية إلى الرياض وجدة',
+        'Serving businesses and homes nationwide -Eastern Province, Riyadh & Jeddah': 'نخدم الشركات والمنازل في جميع أنحاء المملكة من المنطقة الشرقية إلى الرياض وجدة',
         'Years of Experience': 'سنوات خبرة',
         'Projects Delivered': 'مشاريع منفذة',
         'Global Brand Partners': 'شركاء علامات عالمية',
@@ -423,19 +423,19 @@
         'End-to-End Service': 'خدمة متكاملة من البداية للنهاية',
         'One-Stop Solutions': 'حلول شاملة من جهة واحدة',
         'Our Locations': 'مواقعنا',
-        'Head Office � Al Khobar': 'المكتب الرئيسي - الخبر',
-        'Showroom � Al Khobar': 'صالة العرض - الخبر',
-        'Showroom � Al Jubail': 'صالة العرض - الجبيل',
-        'Riyadh � CRO': 'الرياض - المنطقة الوسطى',
-        'Jeddah � WRO': 'جدة - المنطقة الغربية',
+        'Head Office -Al Khobar': 'المكتب الرئيسي - الخبر',
+        'Showroom -Al Khobar': 'صالة العرض - الخبر',
+        'Showroom -Al Jubail': 'صالة العرض - الجبيل',
+        'Riyadh -CRO': 'الرياض - المنطقة الوسطى',
+        'Jeddah -WRO': 'جدة - المنطقة الغربية',
         'Ready to Secure Your Business?': 'هل أنت جاهز لتأمين أعمالك؟',
         'Visit one of our showrooms in Al Khobar or Al Jubail, or get in touch with our security experts for a free consultation and custom quote.': 'زر إحدى صالات العرض في الخبر أو الجبيل، أو تواصل مع خبرائنا للحصول على استشارة مجانية وعرض سعر مخصص.',
         'Visionangles Security Systems is a leading provider of comprehensive security and technology solutions across Saudi Arabia. We specialize in delivering cutting-edge surveillance, access control, networking, audio, LED displays, and smart security systems to businesses and homes throughout the Kingdom.': 'Visionangles Security Systems مزود رائد لحلول الأمن والتقنية الشاملة في المملكة العربية السعودية. نتخصص في تقديم حلول متقدمة للمراقبة والتحكم بالدخول والشبكات والصوت وشاشات LED وأنظمة الأمن الذكية للشركات والمنازل في جميع أنحاء المملكة.',
-        'With our Head Office in Al Khobar, showrooms in Al Khobar and Al Jubail, and dedicated team representatives in Riyadh (Central Region) and Jeddah (Western Region), we serve clients from the Eastern Province to the heart of Riyadh and the Red Sea coast � backed by certified expertise and an unwavering commitment to excellence.': 'من مكتبنا الرئيسي في الخبر وصالات العرض في الخبر والجبيل، ومع ممثلينا في الرياض (المنطقة الوسطى) وجدة (المنطقة الغربية)، نخدم العملاء من المنطقة الشرقية إلى قلب الرياض وساحل البحر الأحمر، مدعومين بخبرة معتمدة والتزام ثابت بالتميز.',
-        'Beyond hardware, we offer SaaS software solutions � including cloud attendance systems, expense trackers, and stock management platforms � as well as fully custom web development services to help businesses grow in the digital era.': 'إلى جانب الأجهزة، نقدم حلولا برمجية بنظام SaaS تشمل أنظمة حضور سحابية ومتتبعات مصروفات ومنصات إدارة مخزون، إضافة إلى خدمات تطوير ويب مخصصة بالكامل لمساعدة الأعمال على النمو في العصر الرقمي.',
-        'To protect businesses and homes across the Eastern Province with reliable, innovative, and intelligently integrated security solutions � backed by certified expertise, world-class brand partnerships, and dedicated local support.': 'حماية الشركات والمنازل في المنطقة الشرقية عبر حلول أمنية موثوقة ومبتكرة ومتكاملة بذكاء، مدعومة بخبرة معتمدة وشراكات مع علامات عالمية ودعم محلي مخصص.',
-        'To be the most trusted technology and security solutions company in Saudi Arabia � continuously expanding our capabilities across security, networking, software, and digital transformation to serve every client need under one roof.': 'أن نكون شركة حلول التقنية والأمن الأكثر موثوقية في المملكة، مع توسيع قدراتنا باستمرار في الأمن والشبكات والبرمجيات والتحول الرقمي لخدمة كل احتياج للعميل من جهة واحدة.',
-        'IP cameras, NVR systems, thermal imaging, burglar alarms, and video intercom � powered by Hikvision, Dahua, EZVIZ, and more.': 'كاميرات IP وأنظمة NVR وتصوير حراري وإنذارات سرقة وإنتركم مرئي، مدعومة من Hikvision وDahua وEZVIZ وغيرها.',
+        'With our Head Office in Al Khobar, showrooms in Al Khobar and Al Jubail, and dedicated team representatives in Riyadh (Central Region) and Jeddah (Western Region), we serve clients from the Eastern Province to the heart of Riyadh and the Red Sea coast -backed by certified expertise and an unwavering commitment to excellence.': 'من مكتبنا الرئيسي في الخبر وصالات العرض في الخبر والجبيل، ومع ممثلينا في الرياض (المنطقة الوسطى) وجدة (المنطقة الغربية)، نخدم العملاء من المنطقة الشرقية إلى قلب الرياض وساحل البحر الأحمر، مدعومين بخبرة معتمدة والتزام ثابت بالتميز.',
+        'Beyond hardware, we offer SaaS software solutions -including cloud attendance systems, expense trackers, and stock management platforms -as well as fully custom web development services to help businesses grow in the digital era.': 'إلى جانب الأجهزة، نقدم حلولا برمجية بنظام SaaS تشمل أنظمة حضور سحابية ومتتبعات مصروفات ومنصات إدارة مخزون، إضافة إلى خدمات تطوير ويب مخصصة بالكامل لمساعدة الأعمال على النمو في العصر الرقمي.',
+        'To protect businesses and homes across the Eastern Province with reliable, innovative, and intelligently integrated security solutions -backed by certified expertise, world-class brand partnerships, and dedicated local support.': 'حماية الشركات والمنازل في المنطقة الشرقية عبر حلول أمنية موثوقة ومبتكرة ومتكاملة بذكاء، مدعومة بخبرة معتمدة وشراكات مع علامات عالمية ودعم محلي مخصص.',
+        'To be the most trusted technology and security solutions company in Saudi Arabia -continuously expanding our capabilities across security, networking, software, and digital transformation to serve every client need under one roof.': 'أن نكون شركة حلول التقنية والأمن الأكثر موثوقية في المملكة، مع توسيع قدراتنا باستمرار في الأمن والشبكات والبرمجيات والتحول الرقمي لخدمة كل احتياج للعميل من جهة واحدة.',
+        'IP cameras, NVR systems, thermal imaging, burglar alarms, and video intercom -powered by Hikvision, Dahua, EZVIZ, and more.': 'كاميرات IP وأنظمة NVR وتصوير حراري وإنذارات سرقة وإنتركم مرئي، مدعومة من Hikvision وDahua وEZVIZ وغيرها.',
         'Enterprise networking infrastructure, firewalls, and cybersecurity appliances from Cisco, Fortinet, Sophos, WatchGuard, Ruijie, D-Link, and TP-Link.': 'بنية تحتية للشبكات المؤسسية وجدران نارية وأجهزة أمن سيبراني من Cisco وFortinet وSophos وWatchGuard وRuijie وD-Link وTP-Link.',
         'Biometric readers, card-based access control, speed gates, and turnstile systems from ZKTeco and Hikvision to manage and secure every entry point.': 'قارئات حيوية وأنظمة تحكم دخول بالبطاقات وبوابات سرعة ودوارات من ZKTeco وHikvision لإدارة وتأمين كل نقطة دخول.',
         'Custom web applications, SaaS platforms (attendance, expenses, stock), and static & dynamic sites with VPS hosting and SEO — full-stack digital solutions for modern businesses.': 'تطبيقات ويب مخصصة ومنصات SaaS للحضور والمصروفات والمخزون، ومواقع ثابتة وديناميكية مع استضافة VPS وتهيئة SEO، حلول رقمية متكاملة للأعمال الحديثة.',
@@ -443,8 +443,8 @@
         'Intelligent parking management and barrier gate systems to streamline vehicle access, monitoring, and revenue control for commercial and residential facilities.': 'أنظمة ذكية لإدارة المواقف وحواجز المركبات لتنظيم دخول السيارات والمراقبة والتحكم بالإيرادات للمنشآت التجارية والسكنية.',
         '100% authorized dealer for 10+ world-leading brands including Hikvision, Dahua, ZKTeco, Cisco, Fortinet, Sophos, Grandstream, and more.': 'موزع معتمد 100% لأكثر من 10 علامات عالمية رائدة تشمل Hikvision وDahua وZKTeco وCisco وFortinet وSophos وGrandstream وغيرها.',
         'Head Office & showrooms in the Eastern Province (Al Khobar, Al Jubail), plus team representatives in Riyadh (CRO) and Jeddah (WRO) — covering the entire Kingdom.': 'مكتب رئيسي وصالات عرض في المنطقة الشرقية (الخبر والجبيل)، إضافة إلى ممثلي فريق في الرياض (CRO) وجدة (WRO)، لتغطية المملكة بالكامل.',
-        'From consultation and system design to supply, installation, commissioning, and ongoing maintenance � we handle every step of your project.': 'من الاستشارة وتصميم النظام إلى التوريد والتركيب والتشغيل والصيانة المستمرة، نتولى كل خطوة في مشروعك.',
-        'Security hardware, network infrastructure, and web development � all under one roof, eliminating the need for multiple vendors.': 'أجهزة أمنية وبنية تحتية للشبكات وتطوير ويب تحت سقف واحد، مما يلغي الحاجة إلى التعامل مع عدة موردين.',
+        'From consultation and system design to supply, installation, commissioning, and ongoing maintenance -we handle every step of your project.': 'من الاستشارة وتصميم النظام إلى التوريد والتركيب والتشغيل والصيانة المستمرة، نتولى كل خطوة في مشروعك.',
+        'Security hardware, network infrastructure, and web development -all under one roof, eliminating the need for multiple vendors.': 'أجهزة أمنية وبنية تحتية للشبكات وتطوير ويب تحت سقف واحد، مما يلغي الحاجة إلى التعامل مع عدة موردين.',
         'Eastern Province, Kingdom of Saudi Arabia': 'المنطقة الشرقية، المملكة العربية السعودية',
         'Commercial Showroom, Eastern Province, KSA': 'صالة عرض تجارية، المنطقة الشرقية، السعودية',
         'Central Region Team': 'فريق المنطقة الوسطى',
@@ -456,9 +456,9 @@
         '?? +966 56 683 5669': 'الهاتف: +966 56 683 5669',
         '? info@visionangles.com': 'البريد: info@visionangles.com',
         '? sales@visionangles.com': 'البريد: sales@visionangles.com',
-        '?? Sun � Thu: 9AM � 6PM': 'الأحد - الخميس: 9 صباحا - 6 مساء',
-        '?? Sat � Thu: 8AM � 9PM': 'السبت - الخميس: 8 صباحا - 9 مساء',
-        '?? Sat � Thu: 9AM � 9PM': 'السبت - الخميس: 9 صباحا - 9 مساء',
+        '?? Sun -Thu: 9AM -6PM': 'الأحد - الخميس: 9 صباحا - 6 مساء',
+        '?? Sat -Thu: 8AM -9PM': 'السبت - الخميس: 8 صباحا - 9 مساء',
+        '?? Sat -Thu: 9AM -9PM': 'السبت - الخميس: 9 صباحا - 9 مساء',
         'Contact Information': 'معلومات التواصل',
         'Send Us a Message': 'أرسل لنا رسالة',
         "Fill out the form below and our expert team will get back to you within 24 business hours. Whether you need a free site survey, product information, pricing details, or technical support, we're here to assist with your security and ELV requirements.": 'املأ النموذج أدناه وسيتواصل معك فريقنا خلال 24 ساعة عمل. سواء كنت تحتاج معاينة موقع مجانية أو معلومات منتجات أو تفاصيل الأسعار أو دعما فنيا، نحن هنا لمساعدتك.',
@@ -1724,6 +1724,8 @@
     Object.assign(exactTranslations, exactProductTranslations);
 
     const phraseReplacements = [
+        [/\bGlobal leader in advanced video surveillance and smart security solutions\b/g, 'رائدة عالميا في حلول المراقبة بالفيديو المتقدمة والأمن الذكي'],
+        [/\bLeading the Future of Intelligent Video Surveillance & Smart Security Solutions\b/g, 'تقود مستقبل المراقبة بالفيديو الذكية وحلول الأمن الذكي'],
         [/\bWorld's Leading Manufacturer of Comprehensive Video Surveillance & Smart Security Solutions\b/g, 'شركة رائدة عالميا في حلول المراقبة بالفيديو والأمن الذكي الشاملة'],
         [/\bWorld's leading\b/gi, 'رائدة عالميا في'],
         [/\bWorld leader in\b/gi, 'رائدة عالميا في'],
@@ -2199,6 +2201,44 @@
         });
     }
 
+    function fixFooterBottom(isArabic) {
+        const footerBottom = document.querySelector('.footer-bottom');
+        if (!footerBottom) return;
+
+        const copyright = footerBottom.querySelector('.footer-bottom-left p');
+        if (copyright) {
+            copyright.textContent = isArabic
+                ? '© 2026 فيجن أنجلز سيكيوريتي. جميع الحقوق محفوظة.'
+                : '© 2026 Vision Angles Security Systems. All Rights Reserved.';
+            copyright.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+            copyright.style.unicodeBidi = 'plaintext';
+        }
+
+        const linkLabels = isArabic
+            ? {
+                'privacy-policy.html': 'سياسة الخصوصية',
+                'terms-of-service.html': 'شروط الخدمة',
+                'editorial-policy.html': 'السياسة التحريرية'
+            }
+            : {
+                'privacy-policy.html': 'Privacy Policy',
+                'terms-of-service.html': 'Terms of Service',
+                'editorial-policy.html': 'Editorial Policy'
+            };
+
+        footerBottom.querySelectorAll('.footer-bottom-right a').forEach(link => {
+            const href = link.getAttribute('href') || '';
+            const key = Object.keys(linkLabels).find(path => href.endsWith(path));
+            if (key) link.textContent = linkLabels[key];
+        });
+
+        const legalLinks = footerBottom.querySelector('.footer-bottom-right');
+        if (legalLinks) {
+            legalLinks.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+            legalLinks.style.unicodeBidi = 'isolate';
+        }
+    }
+
     function setSectionHeader(section, tagHtml, titleHtml, descHtml) {
         if (!section) return;
         const tag = section.querySelector('.section-tag');
@@ -2414,7 +2454,213 @@
         }
 
         applyLedDisplayHeadings(isArabic);
+        applyLedDisplayArabicText(isArabic);
         applySurveillanceHeadings(isArabic);
+    }
+
+    function applyLedDisplayArabicText(isArabic) {
+        if (!isArabic || getPageKey() !== 'led-displays.html') return;
+
+        const ledText = {
+            'Indoor LED Series': 'سلسلة شاشات LED الداخلية',
+            'Outdoor LED Series': 'سلسلة شاشات LED الخارجية',
+            'Commercial LED Series': 'سلسلة شاشات LED التجارية',
+            'Rental LED Series': 'سلسلة شاشات LED للتأجير',
+            'Distribution LED Series': 'سلسلة شاشات LED للتوزيع',
+            'LED & Video Wall Controllers': 'وحدات تحكم LED وجدران الفيديو',
+            'Ultra | Solid Plus | Solid | Flex II | Value Series': 'سلسلة Ultra | Solid Plus | Solid | Flex II | Value',
+            'LMini | LMini P | LHP Series': 'سلسلة LMini | LMini P | LHP',
+            'LumiUltra | LumiFit | LumiSquare Series': 'سلسلة LumiUltra | LumiFit | LumiSquare',
+            'LX II Pro | LS Pro | LST | LSK Series': 'سلسلة LX II Pro | LS Pro | LST | LSK',
+            'BNX | BNX II Series': 'سلسلة BNX | BNX II',
+            'RN II | LRS | LRM Series': 'سلسلة RN II | LRS | LRM',
+            'LC COB | LW | LDA II | LDT | LC Series': 'سلسلة LC COB | LW | LDA II | LDT | LC',
+            'LED Controllers | Video Wall Controllers': 'وحدات تحكم LED | وحدات تحكم جدران الفيديو',
+            'Outdoor LED شاشات': 'شاشات LED الخارجية',
+            'Indoor LED شاشات': 'شاشات LED الداخلية',
+            'فائق دقيق درجة البكسل': 'درجة بكسل فائقة الدقة',
+            'عال الدقة': 'دقة عالية',
+            'فائق عالي الجودة شاشة': 'شاشة فائقة الدقة',
+            'معياري نظام': 'نظام معياري',
+            'Weather-resistant LED displays for billboards, stadiums, and outdoor advertising': 'شاشات LED مقاومة للعوامل الجوية للوحات الإعلانية والملاعب والإعلانات الخارجية',
+            'High-end commercial displays for corporate and retail environments': 'شاشات تجارية فاخرة لبيئات الشركات والمتاجر',
+            'High-quality rental displays for events, concerts, and exhibitions': 'شاشات تأجير عالية الجودة للفعاليات والحفلات والمعارض',
+            'Standard LED modules for system integrators and project solutions': 'وحدات LED قياسية لمتكاملي الأنظمة وحلول المشاريع',
+            'Advanced control solutions for LED displays and video walls': 'حلول تحكم متقدمة لشاشات LED وجدران الفيديو',
+            'LED Module 300*168.75mm': 'وحدة LED مقاس 300×168.75 مم',
+            'Ultra-fine Pixel Pitch LED Display': 'شاشة LED بدرجة بكسل فائقة الدقة',
+            'Fine Pixel Pitch LED Display': 'شاشة LED بدرجة بكسل دقيقة',
+            'Premium Fine Pixel Pitch Display': 'شاشة بدرجة بكسل دقيقة من الفئة المميزة',
+            'HD LED Display | 600 nit': 'شاشة LED عالية الدقة | 600 نت',
+            'HD LED Display | 800 nit': 'شاشة LED عالية الدقة | 800 نت',
+            'DOOH Display | Up to 7500 nit': 'شاشة DOOH | حتى 7500 نت',
+            'Outdoor DOOH | 7500-10000 nit': 'DOOH خارجي | 7500-10000 نت',
+            'All Weather | 7500-10000 nit': 'لكل الظروف الجوية | 7500-10000 نت',
+            'HD Outdoor | 5000 nit': 'شاشة خارجية عالية الدقة | 5000 نت',
+            'HD Outdoor | 5500 nit': 'شاشة خارجية عالية الدقة | 5500 نت',
+            'Indoor Rental | 600 nit': 'تأجير داخلي | 600 نت',
+            'Indoor Rental | 1200 nit': 'تأجير داخلي | 1200 نت',
+            'Indoor Rental | 800-1000 nit': 'تأجير داخلي | 800-1000 نت',
+            'Indoor Rental | 700-800 nit': 'تأجير داخلي | 700-800 نت',
+            'Outdoor Rental | 4500-5000 nit': 'تأجير خارجي | 4500-5000 نت',
+            'Outdoor Rental | 3500-4000 nit': 'تأجير خارجي | 3500-4000 نت',
+            'COB Technology | 600 nit': 'تقنية COB | 600 نت',
+            'DIY Module | Fine Pitch': 'وحدة DIY | درجة بكسل دقيقة',
+            'DIY Module | Versatile': 'وحدة DIY | متعددة الاستخدامات',
+            'Distribution | 500 nit': 'توزيع | 500 نت',
+            'Economical | 5000 nit': 'اقتصادي | 5000 نت',
+            'Economical | 6000 nit': 'اقتصادي | 6000 نت',
+            'Standard Module | Fine Pitch': 'وحدة قياسية | درجة بكسل دقيقة',
+            'Standard Module | Versatile': 'وحدة قياسية | متعددة الاستخدامات',
+            '24 Ports C Series LED Controller': 'وحدة تحكم LED سلسلة C بعدد 24 منفذا',
+            '4 Ports LED Controller': 'وحدة تحكم LED بعدد 4 منافذ',
+            '12 Ports 2-in-1 LED Controller': 'وحدة تحكم LED 2 في 1 بعدد 12 منفذا',
+            'HDMI Input Board': 'لوحة إدخال HDMI',
+            '2 Channels HDMI 4K Input Board': 'لوحة إدخال HDMI 4K بقناتين',
+            '12 Slots C66S Chassis': 'هيكل C66S بعدد 12 فتحة',
+            'Ultra Fine Pitch': 'درجة بكسل فائقة الدقة',
+            'High Resolution': 'دقة عالية',
+            'High Refresh Rate': 'معدل تحديث عال',
+            'Seamless Splicing': 'دمج سلس',
+            'Premium Quality': 'جودة ممتازة',
+            'Energy Efficient': 'كفاءة في استهلاك الطاقة',
+            'Long Lifespan': 'عمر تشغيلي طويل',
+            'GOB Technology': 'تقنية GOB',
+            'Anti-Collision': 'مقاومة للتصادم',
+            'Dustproof Design': 'تصميم مقاوم للغبار',
+            'SMD Technology': 'تقنية SMD',
+            'Flexible Design': 'تصميم مرن',
+            'Curved Installation': 'تركيب منحني',
+            'Creative Applications': 'تطبيقات إبداعية',
+            'Large Format': 'تنسيق كبير',
+            'Cost-Effective': 'اقتصادي',
+            'Cost Effective': 'اقتصادي',
+            'High Value': 'قيمة عالية',
+            'Best Value': 'أفضل قيمة',
+            'Mini LED Technology': 'تقنية Mini LED',
+            'Ultra HD Display': 'شاشة فائقة الدقة',
+            'Low Power Consumption': 'استهلاك طاقة منخفض',
+            'Premium P Series': 'سلسلة P المميزة',
+            'Enhanced Color': 'ألوان محسنة',
+            'Superior Quality': 'جودة فائقة',
+            'NPP Technology': 'تقنية NPP',
+            'Ultra High Density': 'كثافة عالية جدا',
+            'Higher Brightness': 'سطوع أعلى',
+            'IP65 Rated': 'تصنيف IP65',
+            'Outdoor Rated': 'مصنف للاستخدام الخارجي',
+            'Weather Resistant': 'مقاوم للعوامل الجوية',
+            'Mid-Range Viewing': 'مشاهدة متوسطة المدى',
+            'Square Design': 'تصميم مربع',
+            'Easy Installation': 'تركيب سهل',
+            'Modular System': 'نظام معياري',
+            'DOOH Optimized': 'محسن لإعلانات DOOH',
+            'Outdoor Ready': 'جاهز للاستخدام الخارجي',
+            'Digital Signage': 'لوحات رقمية',
+            'Extreme Brightness': 'سطوع فائق',
+            'Long Distance': 'مسافة طويلة',
+            'All Weather': 'لكل الظروف الجوية',
+            'All Weather Stable': 'ثابت في كل الظروف الجوية',
+            'High Pixel Density': 'كثافة بكسل عالية',
+            'Long Viewing Distance': 'مسافة مشاهدة طويلة',
+            'Extreme Durability': 'متانة فائقة',
+            'High Definition': 'دقة عالية',
+            'Outdoor HD': 'دقة عالية خارجية',
+            'Versatile Use': 'استخدام متعدد',
+            'Premium Design': 'تصميم فاخر',
+            'High End Finish': 'تشطيب عالي الجودة',
+            'Elegant Appearance': 'مظهر أنيق',
+            'Free Splicing': 'دمج حر',
+            'Modular Design': 'تصميم معياري',
+            'Creative Shape': 'شكل إبداعي',
+            'Easy Install': 'تركيب سهل',
+            'MIP Technology': 'تقنية MIP',
+            'High Protection': 'حماية عالية',
+            'Event Ready': 'جاهز للفعاليات',
+            'Indoor Optimized': 'محسن للاستخدام الداخلي',
+            'Lightweight': 'خفيف الوزن',
+            'Outdoor Events': 'فعاليات خارجية',
+            'Weather Ready': 'جاهز للطقس',
+            'Event Grade': 'فئة الفعاليات',
+            'Easy Transport': 'نقل سهل',
+            'Stadium Grade': 'فئة الملاعب',
+            'Large Events': 'فعاليات كبيرة',
+            'COB LED': 'LED بتقنية COB',
+            'High Durability': 'متانة عالية',
+            'Pioneering Tech': 'تقنية رائدة',
+            'DIY Assembly': 'تجميع DIY',
+            'Custom Layouts': 'تصاميم مخصصة',
+            'Value Option': 'خيار اقتصادي',
+            'Stable Performance': 'أداء ثابت',
+            'Worry-free': 'تشغيل بلا قلق',
+            'User Friendly': 'سهل الاستخدام',
+            'Project Ready': 'جاهز للمشاريع',
+            'Budget Friendly': 'مناسب للميزانية',
+            'Quick Turnaround': 'تنفيذ سريع',
+            'Standard Size': 'مقاس قياسي',
+            'High Quality': 'جودة عالية',
+            'Wide Range': 'نطاق واسع',
+            'Best Seller': 'الأكثر مبيعا',
+            '24 Output Ports': '24 منفذ إخراج',
+            '12 Output Ports': '12 منفذ إخراج',
+            '4 Output Ports': '4 منافذ إخراج',
+            'C Series': 'سلسلة C',
+            'Professional Grade': 'درجة احترافية',
+            'Compact Design': 'تصميم مدمج',
+            'Easy Setup': 'إعداد سهل',
+            '2-in-1 Design': 'تصميم 2 في 1',
+            'Versatile': 'متعدد الاستخدامات',
+            '4K Support': 'دعم 4K',
+            '2 Channels HDMI': 'قناتا HDMI',
+            'C30S Series': 'سلسلة C30S',
+            'C66S Series': 'سلسلة C66S',
+            'High Performance': 'أداء عال',
+            '12 Expansion Slots': '12 فتحة توسعة',
+            'Enterprise Grade': 'درجة مؤسسية',
+            'Ultra-fine pixel pitch for crystal clear images': 'درجة بكسل فائقة الدقة لصور واضحة للغاية',
+            'Excellent visibility in any lighting condition': 'وضوح ممتاز في أي ظروف إضاءة',
+            'Weather-resistant for outdoor installations': 'مقاوم للعوامل الجوية للتركيبات الخارجية',
+            'Create large video walls with no visible gaps': 'إنشاء جدران فيديو كبيرة بدون فجوات مرئية'
+        };
+
+        const translateLedText = (text) => {
+            const cleaned = text.trim();
+            if (!cleaned) return null;
+            if (ledText[cleaned]) return ledText[cleaned];
+
+            let match = cleaned.match(/^(P[\d.]+|[\d.]+mm) Pixel Pitch$/i);
+            if (match) return `درجة البكسل ${match[1]}`;
+
+            match = cleaned.match(/^([\d.]+mm) Pitch$/i);
+            if (match) return `درجة البكسل ${match[1]}`;
+
+            match = cleaned.match(/^(P[\d.]+) Outdoor LED Display Unit$/i);
+            if (match) return `وحدة شاشة LED خارجية ${match[1]}`;
+
+            match = cleaned.match(/^(P[\d.]+) (GOB|SMD) (\d+)nits$/i);
+            if (match) return `${match[1]} ${match[2]} بسطوع ${match[3]} نت`;
+
+            match = cleaned.match(/^(\d+)nits Brightness$/i);
+            if (match) return `سطوع ${match[1]} نت`;
+
+            match = cleaned.match(/^(P[\d.]+) Flex II LED$/i);
+            if (match) return `شاشة LED مرنة Flex II ${match[1]}`;
+
+            match = cleaned.match(/^(.+?) \| (\d+) nit \| ([\d,]+) pixels\/m/i);
+            if (match) {
+                const type = {
+                    Commercial: 'تجاري',
+                    'Free Form': 'شكل حر'
+                }[match[1]] || match[1];
+                return `${type} | ${match[2]} نت | ${match[3]} بكسل/م`;
+            }
+
+            return null;
+        };
+
+        document.querySelectorAll('h2, h3, p, li, .section-title, .section-desc, .series-desc, .product-badge').forEach((element) => {
+            const translated = translateLedText(element.textContent);
+            if (translated) element.textContent = translated;
+        });
     }
 
     function setLanguage(language) {
@@ -2448,6 +2694,7 @@
         });
 
         applySpecialHeadings(isArabic);
+        fixFooterBottom(isArabic);
 
         document.querySelectorAll('[data-language-toggle]').forEach(toggle => {
             const label = toggle.querySelector('span');

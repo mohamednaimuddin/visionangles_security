@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'We plan, install, and care for smart cameras, alarms, smart locks, and intercoms.': 'نخطط ونركب ونعتني بالكاميرات الذكية والإنذارات والأقفال الذكية والإنتركم.',
         'Our goal is simple — we want you to feel calm and in control of your space.': 'هدفنا بسيط: أن تشعر بالطمأنينة والسيطرة على مساحتك.',
         'We plan, install, and care for smart cameras, alarms, smart locks, and intercoms. Our goal is simple — we want you to feel calm and in control of your space. Reach out and let us help you pick the right setup.': 'نخطط ونركب ونعتني بالكاميرات الذكية والإنذارات والأقفال الذكية والإنتركم. هدفنا بسيط: أن تشعر بالطمأنينة والسيطرة على مساحتك. تواصل معنا ودعنا نساعدك في اختيار التجهيز المناسب.',
+        'We plan, install, and care for smart cameras, alarms, smart locks, and intercoms. Our goal is simple & we want you to feel calm and in control of your space. Reach out and let us help you pick the right setup.': 'نخطط ونركب ونعتني بالكاميرات الذكية والإنذارات والأقفال الذكية والإنتركم. هدفنا بسيط: أن تشعر بالطمأنينة والسيطرة على مساحتك. تواصل معنا ودعنا نساعدك في اختيار التجهيز المناسب.',
         'Reach out and let us help you pick the right setup.': 'تواصل معنا ودعنا نساعدك في اختيار التجهيز المناسب.',
         'Years of trust': 'سنوات من الثقة',
         'Cities served': 'مدن نخدمها',
@@ -113,6 +114,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'Brand Partners': 'من العلامات التجارية',
         'Presence Across': 'حضورنا في',
         'Saudi Arabia': 'المملكة العربية السعودية',
+        'Our Locations': 'مواقعنا',
+        'Three showrooms in the Eastern Province, plus regional offices in Riyadh and Jeddah — backed by local teams ready to plan, install, and support.': 'ثلاثة معارض في المنطقة الشرقية، بالإضافة إلى مكاتب إقليمية في الرياض وجدة، بدعم من فرق محلية جاهزة للتخطيط والتركيب والدعم.',
         'Visit our showrooms, reach our regional teams, or contact the head office for project planning and support.': 'زر معارضنا أو تواصل مع فرقنا الإقليمية أو مع المكتب الرئيسي لتخطيط المشاريع والدعم.',
         'Locations': 'مواقع',
         'Showrooms': 'معارض',
@@ -120,16 +123,21 @@ document.addEventListener('DOMContentLoaded', function() {
         'Nationwide Reach': 'تغطية على مستوى المملكة',
         'Head Office': 'المكتب الرئيسي',
         'Al Khobar — Head Office': 'الخبر - المكتب الرئيسي',
+        'Al Khobar 34714 — Eastern Province, KSA': 'الخبر 34714 - المنطقة الشرقية، المملكة العربية السعودية',
+        'Al Khobar 34714 -Eastern Province, KSA': 'الخبر 34714 - المنطقة الشرقية، المملكة العربية السعودية',
         'Al Khobar Showroom': 'معرض الخبر',
         'Al Jubail Showroom': 'معرض الجبيل',
         'Commercial Shop — Eastern Province, KSA': 'محل تجاري - المنطقة الشرقية، المملكة',
+        'Commercial Shop -Eastern Province, KSA': 'محل تجاري - المنطقة الشرقية، المملكة',
         'Central Region Office, KSA': 'مكتب المنطقة الوسطى، المملكة',
         'Western Region Office, KSA': 'مكتب المنطقة الغربية، المملكة',
         'Sat – Thu · 8AM – 6PM': 'السبت - الخميس · 8 صباحا - 6 مساء',
         'Sat – Thu · 8AM – 9PM': 'السبت - الخميس · 8 صباحا - 9 مساء',
         'Get Directions': 'الاتجاهات',
+        'Industry Data': 'بيانات القطاع',
         'Why Modern Security': 'لماذا يستحق الأمن الحديث',
         'Pays Off': 'الاستثمار',
+        'Independent research on the impact of CCTV, access control and ELV systems — sources cited inline.': 'أبحاث مستقلة حول أثر أنظمة CCTV والتحكم بالدخول وأنظمة ELV، مع ذكر المصادر داخل المحتوى.',
         'Real-world numbers show why integrated security is not just protection — it is risk reduction, operational visibility, and faster response.': 'تظهر الأرقام الواقعية أن الأمن المتكامل ليس حماية فقط، بل تقليل للمخاطر ورؤية تشغيلية واستجابة أسرع.',
         'Average drop in property crime in areas with active CCTV monitoring.': 'متوسط انخفاض جرائم الممتلكات في المناطق التي تستخدم مراقبة CCTV نشطة.',
         'Global video surveillance market size projected by 2030, growing at ~12% CAGR.': 'حجم سوق المراقبة بالفيديو عالميا المتوقع بحلول 2030 مع نمو يقارب 12% سنويا.',
@@ -257,6 +265,44 @@ document.addEventListener('DOMContentLoaded', function() {
         return `${leadingWhitespace}${translation}${trailingWhitespace}`;
     }
 
+    function fixFooterBottom(isArabic) {
+        const footerBottom = document.querySelector('.footer-bottom');
+        if (!footerBottom) return;
+
+        const copyright = footerBottom.querySelector('.footer-bottom-left p');
+        if (copyright) {
+            copyright.textContent = isArabic
+                ? '© 2026 فيجن أنجلز سيكيوريتي. جميع الحقوق محفوظة.'
+                : '© 2026 Vision Angles Security Systems. All Rights Reserved.';
+            copyright.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+            copyright.style.unicodeBidi = 'plaintext';
+        }
+
+        const linkLabels = isArabic
+            ? {
+                'privacy-policy.html': 'سياسة الخصوصية',
+                'terms-of-service.html': 'شروط الخدمة',
+                'editorial-policy.html': 'السياسة التحريرية'
+            }
+            : {
+                'privacy-policy.html': 'Privacy Policy',
+                'terms-of-service.html': 'Terms of Service',
+                'editorial-policy.html': 'Editorial Policy'
+            };
+
+        footerBottom.querySelectorAll('.footer-bottom-right a').forEach(link => {
+            const href = link.getAttribute('href') || '';
+            const key = Object.keys(linkLabels).find(path => href.endsWith(path));
+            if (key) link.textContent = linkLabels[key];
+        });
+
+        const legalLinks = footerBottom.querySelector('.footer-bottom-right');
+        if (legalLinks) {
+            legalLinks.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+            legalLinks.style.unicodeBidi = 'isolate';
+        }
+    }
+
     function setLanguage(language) {
         const isArabic = language === 'ar';
         document.documentElement.lang = isArabic ? 'ar' : 'en';
@@ -301,6 +347,8 @@ document.addEventListener('DOMContentLoaded', function() {
             languageToggle.setAttribute('lang', isArabic ? 'en' : 'ar');
             languageToggle.setAttribute('aria-label', isArabic ? 'Switch to English' : 'Translate this page to Arabic');
         });
+
+        fixFooterBottom(isArabic);
     }
 
     function updateUrl(language) {
